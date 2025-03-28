@@ -131,6 +131,16 @@ const PlatformComparison = () => {
                     Try Signal <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
+                
+                <Button 
+                  variant="outline" 
+                  className="border-digital-purple text-digital-purple hover:bg-digital-purple/10"
+                  asChild
+                >
+                  <a href="https://matrix.org" target="_blank" rel="noopener noreferrer">
+                    Try Matrix <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
               </div>
               
               <div>

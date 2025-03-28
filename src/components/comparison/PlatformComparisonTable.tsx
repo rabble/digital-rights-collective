@@ -1,4 +1,3 @@
-
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import PlatformRating from "./PlatformRating";
 
@@ -242,6 +241,30 @@ const platforms: Platform[] = [
     governance: {
       rating: "Fair",
       explanation: "Group admin controls but centralized platform operation by Signal Foundation."
+    }
+  },
+  {
+    name: "Matrix",
+    type: "Open Protocol",
+    privacy: {
+      rating: "Good",
+      explanation: "Optional E2E encryption with cross-signed device verification, self-hosting option for complete control, but requires proper setup for maximum security."
+    },
+    ownership: {
+      rating: "Good",
+      explanation: "Users own their data with complete export capabilities, servers can be fully controlled by communities, right to be forgotten supported."
+    },
+    interoperability: {
+      rating: "Excellent",
+      explanation: "Federated protocol designed for interoperability, bridges to other platforms (IRC, Discord, Slack, etc.), fully open standard."
+    },
+    algorithmic: {
+      rating: "Excellent",
+      explanation: "No algorithmic manipulation, chronological conversation display, full visibility into server operations through open source clients."
+    },
+    governance: {
+      rating: "Excellent",
+      explanation: "Communities can run their own servers (instances), create custom moderation policies, and set their own rules with comprehensive admin tools."
     }
   }
 ];
