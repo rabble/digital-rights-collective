@@ -2,7 +2,7 @@
 import Layout from "@/components/layout/Layout";
 import RightsHero from "@/components/rights/RightsHero";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Shield, Users, Link as LinkIcon, Database, Settings } from "lucide-react";
+import { CheckCircle, Shield, Users, Link as LinkIcon, Database, Settings, ArrowRight } from "lucide-react";
 import CallToAction from "@/components/home/CallToAction";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
