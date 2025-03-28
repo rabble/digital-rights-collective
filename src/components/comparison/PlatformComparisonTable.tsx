@@ -1,6 +1,9 @@
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import PlatformRating from "./PlatformRating";
+import { ExternalLink } from "lucide-react";
 
 type Platform = {
   name: string;
@@ -277,133 +280,165 @@ const corporatePlatforms = platforms.filter(platform => platform.type === "Corpo
 
 const PlatformComparisonTable = () => {
   return (
-    <div className="overflow-x-auto">
-      <div className="mb-4 px-4">
+    <Card className="overflow-hidden border-0 shadow-md">
+      <div className="p-6 bg-gradient-to-r from-digital-gray-light to-white">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
           <div className="flex items-center">
-            <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800 mr-2">
+            <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 mr-2 shadow-sm">
               Open Protocol
             </span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-700">
               Community-driven platforms based on open standards
             </span>
           </div>
           <div className="flex items-center">
-            <span className="px-2 py-1 rounded-full text-xs bg-red-100 text-red-800 mr-2">
+            <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-red-100 text-red-800 mr-2 shadow-sm">
               Corporate
             </span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-700">
               Centrally-controlled commercial platforms
             </span>
           </div>
         </div>
+        <div className="text-sm text-gray-600">
+          <p className="mb-2">
+            <strong>Rating Key:</strong>
+          </p>
+          <div className="flex flex-wrap gap-6">
+            <div className="flex items-center">
+              <span className="h-3 w-3 rounded-full bg-red-500 mr-2"></span>
+              <span>Poor</span>
+            </div>
+            <div className="flex items-center">
+              <span className="h-3 w-3 rounded-full bg-orange-500 mr-2"></span>
+              <span>Fair</span>
+            </div>
+            <div className="flex items-center">
+              <span className="h-3 w-3 rounded-full bg-green-500 mr-2"></span>
+              <span>Good</span>
+            </div>
+            <div className="flex items-center">
+              <span className="h-3 w-3 rounded-full bg-digital-purple mr-2"></span>
+              <span>Excellent</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="min-w-[150px]">Platform</TableHead>
-            <TableHead>Type</TableHead>
-            <TableHead>Privacy & Security</TableHead>
-            <TableHead>Ownership</TableHead>
-            <TableHead>Interoperability</TableHead>
-            <TableHead>Algorithmic Control</TableHead>
-            <TableHead>Self-governance</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {/* Open Protocols Section */}
-          {openProtocols.map((platform) => (
-            <TableRow key={platform.name}>
-              <TableCell className="font-medium">{platform.name}</TableCell>
-              <TableCell>
-                <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">
-                  {platform.type}
-                </span>
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.privacy.rating}
-                  explanation={platform.privacy.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.ownership.rating}
-                  explanation={platform.ownership.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.interoperability.rating}
-                  explanation={platform.interoperability.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.algorithmic.rating}
-                  explanation={platform.algorithmic.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.governance.rating}
-                  explanation={platform.governance.explanation}
-                />
+      <div className="overflow-x-auto">
+        <Table>
+          <TableHeader className="bg-gray-50">
+            <TableRow>
+              <TableHead className="min-w-[150px] font-bold">Platform</TableHead>
+              <TableHead className="font-bold">Type</TableHead>
+              <TableHead className="font-bold">Privacy & Security</TableHead>
+              <TableHead className="font-bold">Ownership</TableHead>
+              <TableHead className="font-bold">Interoperability</TableHead>
+              <TableHead className="font-bold">Algorithmic Control</TableHead>
+              <TableHead className="font-bold">Self-governance</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {/* Open Protocols Section */}
+            {openProtocols.map((platform) => (
+              <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
+                <TableCell className="font-medium text-digital-purple flex items-center">
+                  {platform.name}
+                  {platform.name === "Mastodon/Fediverse" && (
+                    <ExternalLink className="ml-1 w-3 h-3 text-gray-400" />
+                  )}
+                </TableCell>
+                <TableCell>
+                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                    {platform.type}
+                  </span>
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.privacy.rating}
+                    explanation={platform.privacy.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.ownership.rating}
+                    explanation={platform.ownership.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.interoperability.rating}
+                    explanation={platform.interoperability.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.algorithmic.rating}
+                    explanation={platform.algorithmic.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.governance.rating}
+                    explanation={platform.governance.explanation}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+            
+            {/* Corporate Platforms Section with divider */}
+            <TableRow>
+              <TableCell colSpan={7} className="p-0">
+                <div className="h-3 bg-gray-50 border-y border-gray-200"></div>
               </TableCell>
             </TableRow>
-          ))}
-          
-          {/* Corporate Platforms Section with divider */}
-          <TableRow>
-            <TableCell colSpan={7} className="py-2">
-              <div className="h-px bg-gray-200"></div>
-            </TableCell>
-          </TableRow>
-          
-          {corporatePlatforms.map((platform) => (
-            <TableRow key={platform.name}>
-              <TableCell className="font-medium">{platform.name}</TableCell>
-              <TableCell>
-                <span className="px-2 py-1 rounded-full text-xs bg-red-100 text-red-800">
-                  {platform.type}
-                </span>
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.privacy.rating}
-                  explanation={platform.privacy.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.ownership.rating}
-                  explanation={platform.ownership.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.interoperability.rating}
-                  explanation={platform.interoperability.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.algorithmic.rating}
-                  explanation={platform.algorithmic.explanation}
-                />
-              </TableCell>
-              <TableCell>
-                <PlatformRating
-                  rating={platform.governance.rating}
-                  explanation={platform.governance.explanation}
-                />
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </div>
+            
+            {corporatePlatforms.map((platform) => (
+              <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
+                <TableCell className="font-medium text-digital-gray-dark">
+                  {platform.name}
+                </TableCell>
+                <TableCell>
+                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                    {platform.type}
+                  </span>
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.privacy.rating}
+                    explanation={platform.privacy.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.ownership.rating}
+                    explanation={platform.ownership.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.interoperability.rating}
+                    explanation={platform.interoperability.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.algorithmic.rating}
+                    explanation={platform.algorithmic.explanation}
+                  />
+                </TableCell>
+                <TableCell>
+                  <PlatformRating
+                    rating={platform.governance.rating}
+                    explanation={platform.governance.explanation}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
   );
 };
 
