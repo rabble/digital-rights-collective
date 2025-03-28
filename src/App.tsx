@@ -10,7 +10,7 @@ import BillOfRights from "./pages/BillOfRights";
 import PlatformComparison from "./pages/PlatformComparison";
 import AboutAuthor from "./pages/AboutAuthor";
 import Resources from "./pages/Resources";
-import Podcast from "./pages/Podcast";
+import TakeAction from "./pages/TakeAction";
 import NotFound from "./pages/NotFound";
 
 // Initialize the query client
@@ -28,7 +28,7 @@ const App = () => (
             <Route path="/bill-of-rights" element={<BillOfRights />} />
             <Route path="/platform-comparison" element={<PlatformComparison />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/podcast" element={<Podcast />} />
+            <Route path="/take-action" element={<TakeAction />} />
             <Route path="/about" element={<AboutAuthor />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

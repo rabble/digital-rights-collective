@@ -39,6 +39,9 @@ const Header = () => {
           <Link to="/platform-comparison" className="hover:text-digital-purple-light transition-colors">
             Platform Comparison
           </Link>
+          <Link to="/take-action" className="hover:text-digital-purple-light transition-colors">
+            Take Action
+          </Link>
           <Link to="/resources" className="hover:text-digital-purple-light transition-colors">
             Resources
           </Link>
@@ -67,6 +70,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Platform Comparison
+              </Link>
+              <Link 
+                to="/take-action" 
+                className="hover:text-digital-purple-light transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Take Action
               </Link>
               <Link 
                 to="/resources" 
