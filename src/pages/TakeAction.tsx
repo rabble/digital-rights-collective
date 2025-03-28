@@ -3,6 +3,7 @@ import { Shield, ExternalLink, Lightbulb, Code, Link, Share2, Check, ArrowRight,
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link as RouterLink } from "react-router-dom";
+import CommunityLeadersSection from "@/components/take-action/CommunityLeadersSection";
 
 const TakeAction = () => {
   return (
@@ -74,6 +75,16 @@ const TakeAction = () => {
                     <span>Connect with other communities</span>
                   </li>
                 </ul>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-between text-digital-purple border-digital-purple/30 hover:bg-digital-purple/5 mt-4"
+                  asChild
+                >
+                  <a href="#for-community-leaders">
+                    View detailed guide
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -103,7 +114,7 @@ const TakeAction = () => {
             </div>
             
             {/* "What You Can Do" section */}
-            <div id="what-you-can-do" className="bg-white p-8 rounded-lg shadow-md">
+            <div id="what-you-can-do" className="bg-white p-8 rounded-lg shadow-md mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-digital-gray-dark">
                 What You Can Do
               </h2>
@@ -328,6 +339,11 @@ const TakeAction = () => {
                   </Button>
                 </div>
               </div>
+            </div>
+            
+            {/* "For Community Leaders" section */}
+            <div id="for-community-leaders" className="bg-white p-8 rounded-lg shadow-md">
+              <CommunityLeadersSection />
             </div>
           </div>
         </div>
