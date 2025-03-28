@@ -19,7 +19,7 @@ const HeroSection = () => {
               We Deserve Better:
             </span>
             <br />
-            A New Social Media Bill of Rights
+            A Social Media Bill of Rights
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 animate-slide-in delay-100">
