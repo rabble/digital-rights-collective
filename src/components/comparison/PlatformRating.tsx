@@ -99,7 +99,7 @@ const PlatformRating = ({ rating, explanation }: PlatformRatingProps) => {
   };
 
   return (
-    <div className="space-y-2 p-2 rounded-md hover:bg-gray-50 transition-colors">
+    <div className="space-y-2 p-2 rounded-md hover:bg-gray-50 transition-colors h-full flex flex-col">
       <div className="flex items-center gap-2">
         <span className={`font-semibold ${getRatingColor(rating)}`}>{rating}</span>
         <div className={getRatingColor(rating)}>{getStars(rating)}</div>

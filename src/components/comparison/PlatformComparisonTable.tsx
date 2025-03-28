@@ -342,42 +342,42 @@ const PlatformComparisonTable = () => {
             {/* Open Protocols Section */}
             {openProtocols.map((platform) => (
               <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
-                <TableCell className="font-medium text-digital-purple flex items-center">
+                <TableCell className="font-medium text-digital-purple flex items-center align-top">
                   {platform.name}
                   {platform.name === "Mastodon/Fediverse" && (
                     <ExternalLink className="ml-1 w-3 h-3 text-gray-400" />
                   )}
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
                     {platform.type}
                   </span>
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.privacy.rating}
                     explanation={platform.privacy.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.ownership.rating}
                     explanation={platform.ownership.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.interoperability.rating}
                     explanation={platform.interoperability.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.algorithmic.rating}
                     explanation={platform.algorithmic.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.governance.rating}
                     explanation={platform.governance.explanation}
@@ -395,39 +395,39 @@ const PlatformComparisonTable = () => {
             
             {corporatePlatforms.map((platform) => (
               <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
-                <TableCell className="font-medium text-digital-gray-dark">
+                <TableCell className="font-medium text-digital-gray-dark align-top">
                   {platform.name}
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
                     {platform.type}
                   </span>
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.privacy.rating}
                     explanation={platform.privacy.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.ownership.rating}
                     explanation={platform.ownership.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.interoperability.rating}
                     explanation={platform.interoperability.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.algorithmic.rating}
                     explanation={platform.algorithmic.explanation}
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="align-top">
                   <PlatformRating
                     rating={platform.governance.rating}
                     explanation={platform.governance.explanation}
