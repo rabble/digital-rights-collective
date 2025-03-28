@@ -108,8 +108,8 @@ const platforms: Platform[] = [
       explanation: "Server choice allows privacy-focused options, local-only posts, community-based moderation."
     },
     ownership: {
-      rating: "Excellent",
-      explanation: "Full data portability, content remains yours, easy migration between instances."
+      rating: "Good",
+      explanation: "Content data portability exists, but identity is tied to specific servers. Moving requires followers to update connections."
     },
     interoperability: {
       rating: "Excellent",
@@ -132,8 +132,8 @@ const platforms: Platform[] = [
       explanation: "Public by default like Twitter, but built on AT Protocol with better data controls."
     },
     ownership: {
-      rating: "Good",
-      explanation: "You own your data and can move between providers while keeping your identity."
+      rating: "Excellent",
+      explanation: "You own your data and can move between providers while keeping your identity and followers."
     },
     interoperability: {
       rating: "Good",
@@ -157,7 +157,7 @@ const platforms: Platform[] = [
     },
     ownership: {
       rating: "Excellent",
-      explanation: "Complete ownership of your key-based identity and content, truly portable."
+      explanation: "Complete ownership of your key-based identity and content, truly portable across clients."
     },
     interoperability: {
       rating: "Excellent",
