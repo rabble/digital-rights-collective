@@ -21,7 +21,6 @@ const Footer = () => {
               <li><Link to="/bill-of-rights" className="hover:text-digital-purple-light transition-colors">Bill of Rights</Link></li>
               <li><Link to="/platform-comparison" className="hover:text-digital-purple-light transition-colors">Platform Comparison</Link></li>
               <li><Link to="/resources" className="hover:text-digital-purple-light transition-colors">Resources</Link></li>
-              <li><Link to="/podcast" className="hover:text-digital-purple-light transition-colors">Podcast</Link></li>
               <li><Link to="/about" className="hover:text-digital-purple-light transition-colors">About</Link></li>
             </ul>
           </div>
