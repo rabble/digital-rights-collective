@@ -1,5 +1,4 @@
-
-import { Shield, Lock, Database, Shuffle, LineChart, Users, BookOpen, Globe, Check, ArrowRight, ExternalLink, LightBulb, Code, Link, Share2 } from "lucide-react";
+import { Shield, Lock, Database, Shuffle, LineChart, Users, BookOpen, Globe, Check, ArrowRight, ExternalLink, Lightbulb, Code, Link, Share2 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import RightCard from "@/components/rights/RightCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -404,7 +403,7 @@ const BillOfRights = () => {
                 {/* Demand Better from Your Platforms */}
                 <div>
                   <h3 className="text-xl font-semibold text-digital-purple flex items-center gap-2 mb-4">
-                    <LightBulb className="h-5 w-5" />
+                    <Lightbulb className="h-5 w-5" />
                     Demand Better from Your Platforms
                   </h3>
                   
