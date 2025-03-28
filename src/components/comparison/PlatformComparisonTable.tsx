@@ -101,6 +101,54 @@ const platforms: Platform[] = [
     }
   },
   {
+    name: "Discord",
+    type: "Corporate",
+    privacy: {
+      rating: "Fair",
+      explanation: "Messages can be encrypted in transit but not end-to-end encrypted. Discord has access to all content, collects user data, and has a history of scanning private messages."
+    },
+    ownership: {
+      rating: "Poor",
+      explanation: "Limited data export options, no easy way to migrate server history or structures to other platforms, and Discord reserves the right to use your content."
+    },
+    interoperability: {
+      rating: "Poor",
+      explanation: "Closed ecosystem with minimal API access for third parties, no federation, and no official way to connect with other communication platforms."
+    },
+    algorithmic: {
+      rating: "Fair",
+      explanation: "Basic chronological message display, but server discovery and content recommendations use opaque algorithms with limited user control."
+    },
+    governance: {
+      rating: "Good",
+      explanation: "Robust server administration and moderation tools, customizable roles and permissions, but ultimately subject to Discord's platform-wide policies and decisions."
+    }
+  },
+  {
+    name: "Slack",
+    type: "Corporate",
+    privacy: {
+      rating: "Fair",
+      explanation: "Encrypted data transmission but no E2E encryption. Workspace owners can export all messages, and Slack has access to all content."
+    },
+    ownership: {
+      rating: "Fair",
+      explanation: "Paid workspaces can export data, but the export format isn't easily portable to other platforms. Free workspaces have message history limitations."
+    },
+    interoperability: {
+      rating: "Fair",
+      explanation: "Extensive API for integrations within the Slack ecosystem, but limited ability to connect with external communication platforms without custom development."
+    },
+    algorithmic: {
+      rating: "Good",
+      explanation: "Primarily chronological display with minimal algorithmic interference, clear search functionality, but closed-source with limited visibility into how features like Slack Connect work."
+    },
+    governance: {
+      rating: "Fair",
+      explanation: "Workspace administrators have control over membership and basic policies, but ultimate governance remains with Slack, including terms of service that apply to all workspaces."
+    }
+  },
+  {
     name: "Mastodon/Fediverse",
     type: "Open Protocol",
     privacy: {
