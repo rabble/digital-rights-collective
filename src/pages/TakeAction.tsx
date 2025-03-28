@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link as RouterLink } from "react-router-dom";
 import CommunityLeadersSection from "@/components/take-action/CommunityLeadersSection";
+import DevelopersSection from "@/components/take-action/DevelopersSection";
 
 const TakeAction = () => {
   return (
@@ -110,6 +111,16 @@ const TakeAction = () => {
                     <span>Prioritize user rights and privacy</span>
                   </li>
                 </ul>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-between text-digital-purple border-digital-purple/30 hover:bg-digital-purple/5 mt-4"
+                  asChild
+                >
+                  <a href="#for-developers">
+                    View detailed guide
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
               </div>
             </div>
             
@@ -342,8 +353,13 @@ const TakeAction = () => {
             </div>
             
             {/* "For Community Leaders" section */}
-            <div id="for-community-leaders" className="bg-white p-8 rounded-lg shadow-md">
+            <div id="for-community-leaders" className="bg-white p-8 rounded-lg shadow-md mb-16">
               <CommunityLeadersSection />
+            </div>
+            
+            {/* "For Developers" section */}
+            <div id="for-developers" className="bg-white p-8 rounded-lg shadow-md">
+              <DevelopersSection />
             </div>
           </div>
         </div>
