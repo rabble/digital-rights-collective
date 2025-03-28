@@ -38,40 +38,37 @@ const RightsPreview = () => {
   ];
 
   return (
-    <section className="py-16 md:py-28 bg-gradient-to-b from-digital-gray-light to-white">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-digital-gray-light to-white">
       <div className="container">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-digital-gray-dark">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-digital-gray-dark">
             The Five Fundamental Rights
           </h2>
-          <p className="text-xl text-digital-gray-medium max-w-2xl mx-auto">
+          <p className="text-lg text-digital-gray-medium max-w-2xl mx-auto">
             These five rights form the foundation of our Social Media Bill of Rights.
-            They are the minimum standard that all platforms should uphold.
           </p>
         </div>
         
-        <div className="space-y-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {rights.map((right) => (
             <div 
               key={right.id} 
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-l-8 border-digital-purple"
+              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-digital-purple flex flex-col h-full"
             >
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                <div className="bg-digital-purple/10 p-6 rounded-full text-digital-purple flex-shrink-0">
+              <div className="flex items-center mb-4">
+                <div className="bg-digital-purple/10 p-3 rounded-full text-digital-purple mr-4">
                   {right.icon}
                 </div>
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-digital-gray-dark">{right.title}</h3>
-                  <p className="text-lg text-digital-gray-medium">{right.description}</p>
-                </div>
+                <h3 className="text-xl font-bold text-digital-gray-dark">{right.title}</h3>
               </div>
+              <p className="text-digital-gray-medium flex-grow">{right.description}</p>
             </div>
           ))}
         </div>
         
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <Button 
-            className="bg-digital-purple hover:bg-digital-purple-dark text-white text-lg px-8 py-6 h-auto"
+            className="bg-digital-purple hover:bg-digital-purple-dark text-white"
             size="lg"
             asChild
           >
