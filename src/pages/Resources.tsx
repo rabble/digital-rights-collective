@@ -1,10 +1,38 @@
-
 import Layout from "@/components/layout/Layout";
-import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle } from "lucide-react";
+import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Resources = () => {
+  const dwebPrinciples = [
+    {
+      title: "Technology for Human Agency",
+      icon: <Shield className="h-6 w-6" />,
+      description: "Technology that enables the primacy of people as beneficiaries, upholding security, privacy and self-determination. We value open source, interoperability, and peer-to-peer relationships over hierarchical control."
+    },
+    {
+      title: "Distributed Benefits",
+      icon: <Shuffle className="h-6 w-6" />,
+      description: "Decentralized technologies are most beneficial when rewards and recognition are distributed among contributors. High concentration of organizational control is antithetical to the decentralized web."
+    },
+    {
+      title: "Mutual Respect",
+      icon: <Users className="h-6 w-6" />,
+      description: "We support clear codes of conduct for respectful behavior and accountability. We stand for open and transparent practices that actively pursue equity, mutual trust, and respect."
+    },
+    {
+      title: "Humanity",
+      icon: <Globe className="h-6 w-6" />,
+      description: "The objective is to protect human rights and empower people, especially those experiencing systemic inequity. We stand for agency over data and relationships, rights to free expression, privacy, and knowledge."
+    },
+    {
+      title: "Ecological Awareness",
+      icon: <LineChart className="h-6 w-6" />,
+      description: "Projects should minimize ecological harm and avoid technologies that worsen environmental health. We value systems that reduce energy consumption while increasing device lifespan."
+    }
+  ];
+
   const resourceCategories = [
     {
       title: "Open Protocols",
@@ -136,6 +164,63 @@ const Resources = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-digital-gray-dark">
+              DWeb Principles
+            </h2>
+            
+            <div className="prose prose-lg max-w-none mb-8">
+              <p>
+                The Decentralized Web (DWeb) principles define the values of a decentralized web
+                based on enabling agency of all peoples. These principles originate from members
+                of the DWeb Community — those involved with and convened by the Internet Archive's
+                work on the decentralized web. They shape our approach to digital rights and the
+                resources we share.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {dwebPrinciples.map((principle, index) => (
+                <Card key={index} className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <div className="text-digital-purple">{principle.icon}</div>
+                      <CardTitle className="text-lg">{principle.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {principle.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="flex justify-center mb-12">
+              <Button className="bg-digital-purple hover:bg-digital-purple-dark text-white" asChild>
+                <a 
+                  href="https://getdweb.net/principles" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  Learn More About DWeb Principles
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+            
+            <div className="bg-digital-gray-light p-6 rounded-xl mb-16">
+              <p className="italic text-digital-gray-dark">
+                "These principles stand alongside other sets of principles that share or expand 
+                upon these values, in recognition that our efforts to build a more just and 
+                equitable world are interdependent."
+              </p>
+              <p className="text-right text-digital-gray-medium mt-2">— DWeb Community</p>
+            </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-digital-gray-dark">
               Resource Library
             </h2>
             
@@ -144,6 +229,8 @@ const Resources = () => {
                 Whether you're a community leader looking to migrate your group to a more rights-respecting 
                 platform, a developer interested in building on open protocols, or simply someone who wants 
                 to learn more about digital rights, you'll find resources here to help you take the next step.
+                These resources are curated with the DWeb Principles in mind, focusing on tools and platforms
+                that prioritize human agency, distributed benefits, and ecological awareness.
               </p>
             </div>
             
