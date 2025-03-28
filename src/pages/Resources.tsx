@@ -1,5 +1,6 @@
+
 import Layout from "@/components/layout/Layout";
-import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart } from "lucide-react";
+import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
