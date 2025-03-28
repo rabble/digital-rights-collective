@@ -1,7 +1,8 @@
 
-import { Shield, Lock, Database, Shuffle, LineChart, Users } from "lucide-react";
+import { Shield, Lock, Database, Shuffle, LineChart, Users, BookOpen, Globe, Check } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import RightCard from "@/components/rights/RightCard";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const BillOfRights = () => {
   const rights = [
@@ -117,22 +118,76 @@ const BillOfRights = () => {
       <div className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none mb-16">
-              <h2>Why We Need A Digital Bill of Rights</h2>
-              <p>
-                Our digital spaces have become increasingly hostile to genuine community needs. 
-                The promise of social media – to connect and empower communities – has been subverted 
-                by business models that treat human connection as a commodity to be monetized.
-              </p>
-              <p>
-                Today, if you run an online community with thousands of members, you have no real authority – 
-                your community exists at the whim of corporate policies you cannot influence. This is fundamentally 
-                at odds with how real-world communities have always operated.
-              </p>
-              <p>
-                The time has come to establish these five fundamental rights that all digital platforms 
-                should uphold. These rights form the foundation of a healthier, more equitable digital commons.
-              </p>
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-digital-purple/10 p-2 rounded-full">
+                  <BookOpen className="h-6 w-6 text-digital-purple" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-digital-gray-dark">Why We Need A Digital Bill of Rights</h2>
+              </div>
+              
+              <div className="space-y-10">
+                <div className="bg-gradient-to-r from-digital-gray-light to-white p-8 rounded-lg border-l-4 border-digital-purple shadow-sm animate-fade-in">
+                  <p className="text-lg leading-relaxed text-digital-gray-dark">
+                    Our digital spaces have become increasingly hostile to genuine community needs. 
+                    The promise of social media – to connect and empower communities – has been subverted 
+                    by business models that treat human connection as a commodity to be monetized.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="flex-1 p-6 border-l-2 border-digital-coral bg-white rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-3 text-digital-coral flex items-center gap-2">
+                      <Check className="h-5 w-5" /> The Corporate Problem
+                    </h3>
+                    <p className="text-digital-gray-medium">
+                      Today, if you run an online community with thousands of members, you have no real authority – 
+                      your community exists at the whim of corporate policies you cannot influence. This is fundamentally 
+                      at odds with how real-world communities have always operated.
+                    </p>
+                  </div>
+                  
+                  <div className="flex-1 p-6 border-l-2 border-digital-blue bg-white rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-3 text-digital-blue flex items-center gap-2">
+                      <Globe className="h-5 w-5" /> The Digital Commons
+                    </h3>
+                    <p className="text-digital-gray-medium">
+                      The time has come to establish these five fundamental rights that all digital platforms 
+                      should uphold. These rights form the foundation of a healthier, more equitable digital commons.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-digital-gray-light/50 p-8 rounded-lg">
+                  <Accordion type="single" collapsible className="bg-white rounded-lg overflow-hidden">
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="px-6 py-4 text-lg font-medium">
+                        Frequently Asked Questions
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-6">
+                        <div className="space-y-4">
+                          <div>
+                            <h4 className="font-semibold text-digital-gray-dark">Why do we need these rights now?</h4>
+                            <p className="text-digital-gray-medium">
+                              As our social interactions increasingly move online, the platforms that host them have gained 
+                              unprecedented control over our communities. These rights aim to rebalance power toward the people 
+                              who actually form and nurture these communities.
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-digital-gray-dark">How would these rights be enforced?</h4>
+                            <p className="text-digital-gray-medium">
+                              While some aspects could eventually be enshrined in law, the immediate goal is to build consumer 
+                              awareness and encourage platforms to adopt these principles voluntarily. Supporting alternative 
+                              platforms that already respect these rights is another key strategy.
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
+              </div>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -164,33 +219,69 @@ const BillOfRights = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-digital-gray-dark">For General Users</h3>
                 <ul className="text-left space-y-2 text-digital-gray-medium">
-                  <li>• Explore open protocol alternatives</li>
-                  <li>• Share the Bill of Rights with your networks</li>
-                  <li>• Demand better from the platforms you use</li>
-                  <li>• Support community-driven technology</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Explore open protocol alternatives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Share the Bill of Rights with your networks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Demand better from the platforms you use</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Support community-driven technology</span>
+                  </li>
                 </ul>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-digital-gray-dark">For Community Leaders</h3>
                 <ul className="text-left space-y-2 text-digital-gray-medium">
-                  <li>• Plan migration strategies to open protocols</li>
-                  <li>• Educate your community on digital rights</li>
-                  <li>• Develop community governance processes</li>
-                  <li>• Connect with other communities</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Plan migration strategies to open protocols</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Educate your community on digital rights</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Develop community governance processes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Connect with other communities</span>
+                  </li>
                 </ul>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-digital-gray-dark">For Developers</h3>
                 <ul className="text-left space-y-2 text-digital-gray-medium">
-                  <li>• Build on open protocols, not closed platforms</li>
-                  <li>• Contribute to open source projects</li>
-                  <li>• Design with community governance in mind</li>
-                  <li>• Prioritize user rights and privacy</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Build on open protocols, not closed platforms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Contribute to open source projects</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Design with community governance in mind</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-digital-purple font-bold">•</span>
+                    <span>Prioritize user rights and privacy</span>
+                  </li>
                 </ul>
               </div>
             </div>
