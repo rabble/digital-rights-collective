@@ -1,3 +1,4 @@
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import PlatformRating from "./PlatformRating";
 
@@ -26,6 +27,7 @@ type Platform = {
   };
 };
 
+// Original platforms array
 const platforms: Platform[] = [
   {
     name: "Facebook/Meta",
@@ -269,9 +271,34 @@ const platforms: Platform[] = [
   }
 ];
 
+// Separate platforms by type
+const openProtocols = platforms.filter(platform => platform.type === "Open Protocol");
+const corporatePlatforms = platforms.filter(platform => platform.type === "Corporate");
+
 const PlatformComparisonTable = () => {
   return (
     <div className="overflow-x-auto">
+      <div className="mb-4 px-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          <div className="flex items-center">
+            <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800 mr-2">
+              Open Protocol
+            </span>
+            <span className="text-sm text-gray-600">
+              Community-driven platforms based on open standards
+            </span>
+          </div>
+          <div className="flex items-center">
+            <span className="px-2 py-1 rounded-full text-xs bg-red-100 text-red-800 mr-2">
+              Corporate
+            </span>
+            <span className="text-sm text-gray-600">
+              Centrally-controlled commercial platforms
+            </span>
+          </div>
+        </div>
+      </div>
+
       <Table>
         <TableHeader>
           <TableRow>
@@ -285,15 +312,60 @@ const PlatformComparisonTable = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {platforms.map((platform) => (
+          {/* Open Protocols Section */}
+          {openProtocols.map((platform) => (
             <TableRow key={platform.name}>
               <TableCell className="font-medium">{platform.name}</TableCell>
               <TableCell>
-                <span className={`px-2 py-1 rounded-full text-xs ${
-                  platform.type === "Corporate" 
-                    ? "bg-red-100 text-red-800" 
-                    : "bg-green-100 text-green-800"
-                }`}>
+                <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">
+                  {platform.type}
+                </span>
+              </TableCell>
+              <TableCell>
+                <PlatformRating
+                  rating={platform.privacy.rating}
+                  explanation={platform.privacy.explanation}
+                />
+              </TableCell>
+              <TableCell>
+                <PlatformRating
+                  rating={platform.ownership.rating}
+                  explanation={platform.ownership.explanation}
+                />
+              </TableCell>
+              <TableCell>
+                <PlatformRating
+                  rating={platform.interoperability.rating}
+                  explanation={platform.interoperability.explanation}
+                />
+              </TableCell>
+              <TableCell>
+                <PlatformRating
+                  rating={platform.algorithmic.rating}
+                  explanation={platform.algorithmic.explanation}
+                />
+              </TableCell>
+              <TableCell>
+                <PlatformRating
+                  rating={platform.governance.rating}
+                  explanation={platform.governance.explanation}
+                />
+              </TableCell>
+            </TableRow>
+          ))}
+          
+          {/* Corporate Platforms Section with divider */}
+          <TableRow>
+            <TableCell colSpan={7} className="py-2">
+              <div className="h-px bg-gray-200"></div>
+            </TableCell>
+          </TableRow>
+          
+          {corporatePlatforms.map((platform) => (
+            <TableRow key={platform.name}>
+              <TableCell className="font-medium">{platform.name}</TableCell>
+              <TableCell>
+                <span className="px-2 py-1 rounded-full text-xs bg-red-100 text-red-800">
                   {platform.type}
                 </span>
               </TableCell>
