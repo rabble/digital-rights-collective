@@ -11,6 +11,7 @@ import PlatformComparison from "./pages/PlatformComparison";
 import AboutAuthor from "./pages/AboutAuthor";
 import Resources from "./pages/Resources";
 import TakeAction from "./pages/TakeAction";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 // Initialize the query client
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/take-action" element={<TakeAction />} />
             <Route path="/about" element={<AboutAuthor />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

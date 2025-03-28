@@ -45,6 +45,9 @@ const Header = () => {
           <Link to="/resources" className="hover:text-digital-purple-light transition-colors">
             Resources
           </Link>
+          <Link to="/faq" className="hover:text-digital-purple-light transition-colors">
+            FAQ
+          </Link>
           <Link to="/about" className="hover:text-digital-purple-light transition-colors">
             About
           </Link>
@@ -84,6 +87,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Resources
+              </Link>
+              <Link 
+                to="/faq" 
+                className="hover:text-digital-purple-light transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link 
                 to="/about" 

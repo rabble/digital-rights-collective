@@ -1,7 +1,7 @@
+
 import { Shield, Lock, Database, Shuffle, LineChart, Users, BookOpen, Globe, Check, ArrowRight, ExternalLink } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import RightCard from "@/components/rights/RightCard";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -176,34 +176,22 @@ const BillOfRights = () => {
                   </div>
                 </div>
                 
-                <div className="bg-digital-gray-light/50 p-8 rounded-lg">
-                  <Accordion type="single" collapsible className="bg-white rounded-lg overflow-hidden">
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger className="px-6 py-4 text-lg font-medium">
-                        Frequently Asked Questions
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6">
-                        <div className="space-y-4">
-                          <div>
-                            <h4 className="font-semibold text-digital-gray-dark">Why do we need these rights now?</h4>
-                            <p className="text-digital-gray-medium">
-                              As our social interactions increasingly move online, the platforms that host them have gained 
-                              unprecedented control over our communities. These rights aim to rebalance power toward the people 
-                              who actually form and nurture these communities.
-                            </p>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-digital-gray-dark">How would these rights be enforced?</h4>
-                            <p className="text-digital-gray-medium">
-                              While some aspects could eventually be enshrined in law, the immediate goal is to build consumer 
-                              awareness and encourage platforms to adopt these principles voluntarily. Supporting alternative 
-                              platforms that already respect these rights is another key strategy.
-                            </p>
-                          </div>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+                <div className="bg-digital-gray-light/50 p-8 rounded-lg text-center">
+                  <h3 className="text-xl font-bold mb-4 text-digital-gray-dark">
+                    Have Questions About Digital Rights?
+                  </h3>
+                  <p className="text-digital-gray-medium mb-6">
+                    Check out our FAQ page for answers to common questions about these rights and how they can be implemented.
+                  </p>
+                  <Button 
+                    variant="outline"
+                    className="border-digital-purple text-digital-purple hover:bg-digital-purple/10"
+                    asChild
+                  >
+                    <Link to="/faq">
+                      View Frequently Asked Questions <ArrowRight className="ml-1" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
