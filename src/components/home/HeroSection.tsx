@@ -42,7 +42,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-white/20 text-white hover:bg-white/10 bg-digital-purple-dark/40"
               asChild
             >
               <Link to="/platform-comparison">
