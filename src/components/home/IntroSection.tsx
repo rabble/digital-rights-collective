@@ -26,10 +26,10 @@ const IntroSection = () => {
             </p>
             
             <p>
-              I've spent decades building social technologies, including working at Odeo, the company that ultimately pivoted to become Twitter, 
-              where I was the social app's first employee and de facto CTO until late 2006; and building numerous other community organizing platforms. 
-              I've watched with growing concern as our digital spaces have become increasingly toxic and hostile to genuine community needs. 
-              The promise of social media as we defined it in the early days—to connect and empower communities of people—has been subverted by a 
+              Rabble has spent decades building social technologies, including working at Odeo, the company that ultimately pivoted to become Twitter, 
+              where they were the social app's first employee and de facto CTO until late 2006; and building numerous other community organizing platforms. 
+              They've watched with growing concern as our digital spaces have become increasingly toxic and hostile to genuine community needs. 
+              The promise of social media as they defined it in the early days—to connect and empower communities of people—has been subverted by a 
               business model that treats human connection as a commodity to be monetized.
             </p>
             
@@ -43,7 +43,7 @@ const IntroSection = () => {
             <div className="bg-digital-purple/5 p-6 rounded-lg border-l-4 border-digital-purple my-8">
               <h3 className="text-xl font-bold mb-2 text-digital-purple-dark">It's Time For a New Bill Of Digital Rights For Social Media</h3>
               <p className="mb-0">
-                I believe that the time has come for a new Social Media Bill of Digital Rights. 
+                Rabble believes that the time has come for a new Social Media Bill of Digital Rights. 
                 Just as the original Bill of Rights protected individual freedoms from government overreach, 
                 we need fundamental protections for our digital communities from corporate control and surveillance capitalism.
               </p>
