@@ -1,7 +1,6 @@
 
 import Layout from "@/components/layout/Layout";
 import RightsHero from "@/components/rights/RightsHero";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Shield, Users, Link as LinkIcon, Database, Settings, ArrowRight } from "lucide-react";
 import CallToAction from "@/components/home/CallToAction";
 import { Button } from "@/components/ui/button";
@@ -113,100 +112,99 @@ const BillOfRights = () => {
               </div>
             </div>
 
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-6 text-digital-gray-dark">Learn More About Each Right</h3>
-              <Accordion type="single" collapsible className="w-full bg-white rounded-xl shadow-md mb-12">
-                <AccordionItem value="item-1" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl font-semibold text-digital-gray-dark px-6 py-4">
-                    <div className="flex items-center">
-                      <CheckCircle className="mr-2 h-6 w-6 text-digital-purple" />
-                      Privacy & Security
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-digital-gray-medium px-6 pb-4">
-                    <p className="mb-4">The ability to communicate and organize without fear of surveillance or exploitation.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Conversations protected from corporate data mining</li>
-                      <li>Protection from government surveillance</li>
-                      <li>End-to-end encryption as a standard feature</li>
-                      <li>Clear, understandable privacy policies</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-2" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl font-semibold text-digital-gray-dark px-6 py-4">
-                    <div className="flex items-center">
-                      <CheckCircle className="mr-2 h-6 w-6 text-digital-purple" />
-                      Ownership
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-digital-gray-medium px-6 pb-4">
-                    <p className="mb-4">People and their communities must own their digital identities, connections and data, including the right to be forgotten.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Complete access to download your own data</li>
-                      <li>Right to permanently delete your information</li>
-                      <li>Control over how your content is used</li>
-                      <li>Protection from algorithmic exploitation</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-3" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl font-semibold text-digital-gray-dark px-6 py-4">
-                    <div className="flex items-center">
-                      <CheckCircle className="mr-2 h-6 w-6 text-digital-purple" />
-                      Interoperability & The Right To Exit
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-digital-gray-medium px-6 pb-4">
-                    <p className="mb-4">The freedom to port your community in its entirety, to another app without losing your connections and content.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Ability to migrate your entire community to a new platform</li>
-                      <li>Data formats that work across different platforms</li>
-                      <li>Open standards for social media interactions</li>
-                      <li>No artificial barriers to leaving platforms</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-4" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl font-semibold text-digital-gray-dark px-6 py-4">
-                    <div className="flex items-center">
-                      <CheckCircle className="mr-2 h-6 w-6 text-digital-purple" />
-                      Algorithmic Transparency & Control
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-digital-gray-medium px-6 pb-4">
-                    <p className="mb-4">Choosing the algorithms that shape your interactions: no more black box systems optimizing for engagement at the expense of community well-being.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Access to understand how algorithms rank content</li>
-                      <li>User control over feed preferences</li>
-                      <li>Options to view content chronologically</li>
-                      <li>Protection from manipulation and addiction-driven design</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="item-5">
-                  <AccordionTrigger className="text-xl font-semibold text-digital-gray-dark px-6 py-4">
-                    <div className="flex items-center">
-                      <CheckCircle className="mr-2 h-6 w-6 text-digital-purple" />
-                      Self-governance
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-digital-gray-medium px-6 pb-4">
-                    <p className="mb-4">Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Community-defined moderation standards</li>
-                      <li>Democratic processes for rule creation</li>
-                      <li>Protection from arbitrary deplatforming</li>
-                      <li>Cultural context in content moderation</li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+            <div className="text-center mb-16">
+              <h3 className="text-2xl font-bold mb-8 text-digital-gray-dark">Learn More About Each Right</h3>
+            </div>
+
+            {/* Expanded detailed sections for each right */}
+            <div className="space-y-12 mb-16">
+              {/* Detailed Right 1 */}
+              <div className="bg-white rounded-xl shadow-md p-8">
+                <div className="flex items-center mb-6">
+                  <CheckCircle className="h-8 w-8 text-digital-purple mr-3" />
+                  <h3 className="text-2xl font-bold text-digital-gray-dark">Privacy & Security</h3>
+                </div>
+                <div className="ml-11">
+                  <p className="mb-4 text-digital-gray-medium">The ability to communicate and organize without fear of surveillance or exploitation.</p>
+                  <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
+                    <li>Conversations protected from corporate data mining</li>
+                    <li>Protection from government surveillance</li>
+                    <li>End-to-end encryption as a standard feature</li>
+                    <li>Clear, understandable privacy policies</li>
+                  </ul>
+                </div>
+              </div>
               
+              {/* Detailed Right 2 */}
+              <div className="bg-white rounded-xl shadow-md p-8">
+                <div className="flex items-center mb-6">
+                  <CheckCircle className="h-8 w-8 text-digital-purple mr-3" />
+                  <h3 className="text-2xl font-bold text-digital-gray-dark">Ownership</h3>
+                </div>
+                <div className="ml-11">
+                  <p className="mb-4 text-digital-gray-medium">People and their communities must own their digital identities, connections and data, including the right to be forgotten.</p>
+                  <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
+                    <li>Complete access to download your own data</li>
+                    <li>Right to permanently delete your information</li>
+                    <li>Control over how your content is used</li>
+                    <li>Protection from algorithmic exploitation</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Detailed Right 3 */}
+              <div className="bg-white rounded-xl shadow-md p-8">
+                <div className="flex items-center mb-6">
+                  <CheckCircle className="h-8 w-8 text-digital-purple mr-3" />
+                  <h3 className="text-2xl font-bold text-digital-gray-dark">Interoperability & The Right To Exit</h3>
+                </div>
+                <div className="ml-11">
+                  <p className="mb-4 text-digital-gray-medium">The freedom to port your community in its entirety, to another app without losing your connections and content.</p>
+                  <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
+                    <li>Ability to migrate your entire community to a new platform</li>
+                    <li>Data formats that work across different platforms</li>
+                    <li>Open standards for social media interactions</li>
+                    <li>No artificial barriers to leaving platforms</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Detailed Right 4 */}
+              <div className="bg-white rounded-xl shadow-md p-8">
+                <div className="flex items-center mb-6">
+                  <CheckCircle className="h-8 w-8 text-digital-purple mr-3" />
+                  <h3 className="text-2xl font-bold text-digital-gray-dark">Algorithmic Transparency & Control</h3>
+                </div>
+                <div className="ml-11">
+                  <p className="mb-4 text-digital-gray-medium">Choosing the algorithms that shape your interactions: no more black box systems optimizing for engagement at the expense of community well-being.</p>
+                  <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
+                    <li>Access to understand how algorithms rank content</li>
+                    <li>User control over feed preferences</li>
+                    <li>Options to view content chronologically</li>
+                    <li>Protection from manipulation and addiction-driven design</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Detailed Right 5 */}
+              <div className="bg-white rounded-xl shadow-md p-8">
+                <div className="flex items-center mb-6">
+                  <CheckCircle className="h-8 w-8 text-digital-purple mr-3" />
+                  <h3 className="text-2xl font-bold text-digital-gray-dark">Self-governance</h3>
+                </div>
+                <div className="ml-11">
+                  <p className="mb-4 text-digital-gray-medium">Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community.</p>
+                  <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
+                    <li>Community-defined moderation standards</li>
+                    <li>Democratic processes for rule creation</li>
+                    <li>Protection from arbitrary deplatforming</li>
+                    <li>Cultural context in content moderation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center">
               <Button size="lg" className="bg-digital-purple hover:bg-digital-purple-dark" asChild>
                 <Link to="/take-action">
                   Join the Movement <ArrowRight className="ml-2 h-5 w-5" />
