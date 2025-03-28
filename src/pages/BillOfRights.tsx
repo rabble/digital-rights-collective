@@ -115,6 +115,23 @@ const BillOfRights = () => {
         </div>
       </div>
       
+      {/* Five Rights at the top of the page */}
+      <div className="bg-gradient-to-b from-digital-purple/10 to-white py-12 md:py-16">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {rights.map((right, index) => (
+              <div key={index} className="flex flex-col h-full bg-white rounded-lg shadow-md p-6 border-t-4 border-digital-purple hover:shadow-lg transition-all">
+                <div className="bg-digital-purple/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-digital-purple">
+                  {right.icon}
+                </div>
+                <h2 className="text-xl font-bold text-digital-gray-dark mb-3">{right.title}</h2>
+                <p className="text-digital-gray-medium text-sm">{right.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
       <div className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
