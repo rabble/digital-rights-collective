@@ -27,10 +27,10 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-digital-purple text-white">
+    <section className="py-16 md:py-24 bg-digital-purple text-white" aria-labelledby="cta-heading">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+          <h2 id="cta-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Join the Movement for Digital Rights
           </h2>
           
@@ -54,6 +54,7 @@ const CallToAction = () => {
                     onChange={(e) => setName(e.target.value)}
                     required
                     className="bg-white/20 border-white/20 text-white placeholder:text-white/50"
+                    aria-required="true"
                   />
                 </div>
                 
@@ -69,6 +70,7 @@ const CallToAction = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="bg-white/20 border-white/20 text-white placeholder:text-white/50"
+                    aria-required="true"
                   />
                 </div>
               </div>
@@ -77,6 +79,7 @@ const CallToAction = () => {
                 type="submit"
                 className="w-full bg-digital-coral hover:bg-digital-coral/90"
                 disabled={loading}
+                aria-busy={loading}
               >
                 {loading ? "Joining..." : "Endorse the Bill of Rights"}
               </Button>
@@ -98,15 +101,15 @@ const CallToAction = () => {
             
             <div className="grid grid-cols-3 gap-4 my-8">
               <div>
-                <div className="text-2xl md:text-4xl font-bold">127+</div>
+                <div className="text-2xl md:text-4xl font-bold" aria-label="127 plus organizations">127+</div>
                 <div className="text-white/70">Organizations</div>
               </div>
               <div>
-                <div className="text-2xl md:text-4xl font-bold">2,458</div>
+                <div className="text-2xl md:text-4xl font-bold" aria-label="2,458 endorsers">2,458</div>
                 <div className="text-white/70">Endorsers</div>
               </div>
               <div>
-                <div className="text-2xl md:text-4xl font-bold">18</div>
+                <div className="text-2xl md:text-4xl font-bold" aria-label="18 countries">18</div>
                 <div className="text-white/70">Countries</div>
               </div>
             </div>
