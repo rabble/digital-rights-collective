@@ -71,6 +71,17 @@ const PlatformComparison = () => {
               </div>
               
               <div className="bg-digital-gray-light p-4 md:p-6 rounded-lg">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-digital-gray-dark">The Public Benefit Corporation Model</h3>
+                <p className="text-sm md:text-base text-digital-gray-medium">
+                  Several emerging platforms like Bluesky and Verse are structured as Public Benefit Corporations (PBCs), 
+                  representing a promising middle ground between purely profit-driven companies and non-profits. 
+                  PBCs are legally required to consider their impact on users, communities, and society—not just 
+                  shareholder returns. This corporate structure allows these platforms to prioritize digital rights 
+                  and ethical practices while maintaining sustainable business models.
+                </p>
+              </div>
+              
+              <div className="bg-digital-gray-light p-4 md:p-6 rounded-lg">
                 <h3 className="text-lg md:text-xl font-semibold mb-2 text-digital-gray-dark">The Privacy Trade-off</h3>
                 <p className="text-sm md:text-base text-digital-gray-medium">
                   Corporate platforms with business models built on advertising consistently perform poorly 

@@ -36,9 +36,11 @@ const PlatformRating = ({ rating, explanation, compact = false }: PlatformRating
           </Badge>
         );
       case "Fair":
-        <Badge variant="outline" className="bg-orange-50 text-orange-500 border-orange-200">
-          <AlertCircle className="w-3 h-3 mr-1" /> Fair
-        </Badge>;
+        return (
+          <Badge variant="outline" className="bg-orange-50 text-orange-500 border-orange-200">
+            <AlertCircle className="w-3 h-3 mr-1" /> Fair
+          </Badge>
+        );
       case "Good":
         return (
           <Badge variant="outline" className="bg-green-50 text-green-500 border-green-200">
