@@ -62,26 +62,26 @@ const AboutAuthor = () => {
                   
                   <p>
                     As the first employee and de facto CTO at Odeo (which later pivoted to become Twitter) 
-                    until late 2006, Evan has unique insights into the evolution of social media from its 
+                    until late 2006, Rabble has unique insights into the evolution of social media from its 
                     early, community-oriented days to the corporate platforms we know today.
                   </p>
                   
                   <p>
-                    Throughout his career, Evan has been dedicated to building technologies that empower 
+                    Throughout his career, Rabble has been dedicated to building technologies that empower 
                     communities rather than exploit them. He has worked with activist groups, open-source 
                     projects, and community organizers around the world to develop digital tools that respect 
                     user rights and enable collective governance.
                   </p>
                   
                   <p>
-                    The Social Media Bill of Rights initiative draws on Evan's extensive experience at the 
+                    The Social Media Bill of Rights initiative draws on Rabble's extensive experience at the 
                     intersection of technology and community organizing. It represents his vision for 
                     reclaiming our digital commons from corporate control and building a more equitable, 
                     community-governed internet.
                   </p>
                   
                   <p>
-                    Beyond advocacy, Evan is actively working with a network of developers, designers, and 
+                    Beyond advocacy, Rabble is actively working with a network of developers, designers, and 
                     community leaders to build the next generation of social platforms based on open protocols 
                     and community governance. He believes that the technical foundations for a better social 
                     media landscape already exist – what's needed now is the social movement to make it a reality.
@@ -128,7 +128,7 @@ const AboutAuthor = () => {
                     For Speaking Engagements
                   </h3>
                   <p className="text-digital-gray-medium mb-4">
-                    Interested in having Evan speak at your event about digital rights, 
+                    Interested in having Rabble speak at your event about digital rights, 
                     community technology, or the future of social media?
                   </p>
                   <Button className="w-full bg-digital-purple hover:bg-digital-purple-dark text-white">
