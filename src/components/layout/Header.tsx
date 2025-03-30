@@ -15,7 +15,9 @@ const Header = () => {
     <header className="bg-digital-gray-dark text-white py-4">
       <div className="container flex justify-between items-center">
         <Link to="/" className="font-bold text-xl md:text-2xl">
-          Social Media Bill of Rights
+          <span className="whitespace-nowrap">Social Media</span>
+          <br className="sm:hidden" />
+          <span className="whitespace-nowrap"> Bill of Rights</span>
         </Link>
 
         {/* Mobile menu button */}
