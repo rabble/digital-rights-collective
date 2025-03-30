@@ -16,16 +16,12 @@ const HeroSection = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 animate-fade-in">
             <span className="bg-gradient-to-r from-digital-purple-light to-digital-coral bg-clip-text text-transparent">
-              We Deserve Better:
+              Social Media Bill of Rights
             </span>
-            <br />
-            A Social Media Bill of Rights
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 animate-slide-in delay-100">
-            Our digital communities are under siege. Corporate platforms surveil our conversations, 
-            manipulate our connections, and can erase our digital existence with the flip of a switch.
-            The time for digital liberation is now.
+            It's time to reclaim our digital communities.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

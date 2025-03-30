@@ -16,26 +16,12 @@ const RightsHero = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 animate-fade-in">
             <span className="bg-gradient-to-r from-digital-purple-light to-digital-coral bg-clip-text text-transparent">
-              Reclaiming Our Social Media
+              Social Media Bill of Rights
             </span>
-            <br />
-            A Bill of Rights for Social Media
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 animate-slide-in delay-100">
-            Our digital spaces have been colonized by platforms that treat human connection as a commodity. 
-            Emergency responders find life-saving information buried by engagement algorithms. 
-            Community organizers face surveillance and arbitrary deplatforming. 
-            Thousands of groups lose years of connection and content without recourse or explanation.
-          </p>
-          
-          <p className="text-lg md:text-xl text-gray-300 mb-8 animate-slide-in delay-200">
-            This isn't inevitable—it's by design. And we can design differently.
-          </p>
-          
-          <p className="text-lg md:text-xl text-gray-200 mb-8 animate-slide-in delay-300 font-semibold">
-            The Social Media Bill of Rights represents a fundamental reimagining of how our online communities should function. 
-            It's not just about improving existing platforms but about transforming the relationship between communities and the digital spaces they inhabit.
+            Reclaiming our digital spaces from platforms that treat human connection as a commodity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
