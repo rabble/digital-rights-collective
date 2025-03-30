@@ -1,32 +1,21 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const CallToAction = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Thanks for joining the movement!",
-        description: "We'll keep you updated on the latest developments.",
+  // This useEffect ensures the MailerLite script recognizes the embedded form after component mount
+  useEffect(() => {
+    // Check if ml function exists (MailerLite script loaded)
+    if (typeof window !== 'undefined' && window.ml) {
+      // Force MailerLite to look for new forms
+      window.ml('show', {
+        selector: '.ml-embedded',
+        display: 'inline'
       });
-      setEmail("");
-      setName("");
-    }, 1000);
-  };
-
+    }
+  }, []);
+  
   return (
     <section className="py-16 md:py-24 bg-digital-purple text-white" aria-labelledby="cta-heading">
       <div className="container">
@@ -41,64 +30,22 @@ const CallToAction = () => {
           </p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-left text-sm font-medium">
-                    Your Name
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Jane Doe"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="bg-white/20 border-white/20 text-white placeholder:text-white/50"
-                    aria-required="true"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-left text-sm font-medium">
-                    Your Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="jane@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="bg-white/20 border-white/20 text-white placeholder:text-white/50"
-                    aria-required="true"
-                  />
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  type="submit"
-                  className="w-full sm:w-auto bg-digital-coral hover:bg-digital-coral/90"
-                  disabled={loading}
-                  aria-busy={loading}
-                >
-                  {loading ? "Joining..." : "Join the Newsletter"}
-                </Button>
-
-                <Button
-                  className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
-                  asChild
-                >
-                  <Link to="/endorse">Endorse the Bill of Rights</Link>
-                </Button>
-              </div>
-              
-              <p className="text-xs text-white/70">
-                By joining, you'll receive updates on the movement and how you can take action.
-                We respect your privacy and will never share your information.
-              </p>
-            </form>
+            {/* MailerLite form */}
+            <div className="ml-embedded" data-form="OuZTW0"></div>
+            
+            <div className="mt-6">
+              <Button
+                className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
+                asChild
+              >
+                <Link to="/endorse">Endorse the Bill of Rights</Link>
+              </Button>
+            </div>
+            
+            <p className="text-xs text-white/70 mt-4">
+              By joining, you'll receive updates on the movement and how you can take action.
+              We respect your privacy and will never share your information.
+            </p>
           </div>
         </div>
       </div>

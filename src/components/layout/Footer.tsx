@@ -1,7 +1,20 @@
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Footer = () => {
+  // This useEffect ensures the MailerLite script recognizes the embedded form after component mount
+  useEffect(() => {
+    // Check if ml function exists (MailerLite script loaded)
+    if (typeof window !== 'undefined' && window.ml) {
+      // Force MailerLite to look for new forms
+      window.ml('show', {
+        selector: '.ml-embedded',
+        display: 'inline'
+      });
+    }
+  }, []);
+
   return (
     <footer className="bg-digital-gray-dark text-white py-12">
       <div className="container mx-auto px-4">
@@ -40,21 +53,8 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
-            {/* Social media connect links removed as requested */}
-            <form className="space-y-2">
-              <p className="text-sm text-gray-400">Subscribe to our newsletter</p>
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="w-full px-3 py-2 bg-digital-gray-medium text-white rounded focus:outline-none focus:ring-2 focus:ring-digital-purple"
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-digital-purple hover:bg-digital-purple-dark transition-colors py-2 px-4 rounded"
-              >
-                Subscribe
-              </button>
-            </form>
+            {/* MailerLite form */}
+            <div className="ml-embedded" data-form="OuZTW0"></div>
           </div>
         </div>
         

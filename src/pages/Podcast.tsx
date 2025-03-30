@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,11 +57,19 @@ const Podcast = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.ml) {
+      window.ml('show', {
+        selector: '.ml-embedded',
+        display: 'inline'
+      });
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call
     setTimeout(() => {
       setLoading(false);
       toast({
@@ -95,23 +102,7 @@ const Podcast = () => {
                   on the Social Media Bill of Rights movement.
                 </p>
                 
-                <form onSubmit={handleSubmit} className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="bg-white/20 border-white/20 text-white placeholder:text-white/50"
-                  />
-                  <Button 
-                    type="submit"
-                    className="bg-digital-coral hover:bg-digital-coral/90 whitespace-nowrap"
-                    disabled={loading}
-                  >
-                    {loading ? "Subscribing..." : "Subscribe"}
-                  </Button>
-                </form>
+                <div className="ml-embedded" data-form="OuZTW0"></div>
               </div>
             </div>
             
