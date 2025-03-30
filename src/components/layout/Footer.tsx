@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -41,17 +40,7 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
-            <div className="flex space-x-4 mb-6">
-              <a href="#" className="text-white hover:text-digital-purple-light transition-colors">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white hover:text-digital-purple-light transition-colors">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white hover:text-digital-purple-light transition-colors">
-                <Instagram className="h-6 w-6" />
-              </a>
-            </div>
+            {/* Social media connect links removed as requested */}
             <form className="space-y-2">
               <p className="text-sm text-gray-400">Subscribe to our newsletter</p>
               <input 
