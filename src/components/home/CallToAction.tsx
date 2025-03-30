@@ -90,30 +90,6 @@ const CallToAction = () => {
               </p>
             </form>
           </div>
-          
-          <div className="mt-8">
-            <div className="inline-flex items-center justify-center w-full">
-              <hr className="w-64 h-px my-8 bg-white/20 border-0" />
-              <span className="absolute px-3 font-medium text-white bg-digital-purple">
-                Our Impact
-              </span>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-4 my-8">
-              <div>
-                <div className="text-2xl md:text-4xl font-bold" aria-label="127 plus organizations">127+</div>
-                <div className="text-white/70">Organizations</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-4xl font-bold" aria-label="2,458 endorsers">2,458</div>
-                <div className="text-white/70">Endorsers</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-4xl font-bold" aria-label="18 countries">18</div>
-                <div className="text-white/70">Countries</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
