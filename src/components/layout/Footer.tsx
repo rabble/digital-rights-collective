@@ -33,6 +33,8 @@ const Footer = () => {
               <li><a href="https://nostr.com" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Nostr</a></li>
               <li><a href="https://bsky.app" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">BlueSky</a></li>
               <li><a href="https://signal.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Signal</a></li>
+              <li><a href="https://www.verse-pbc.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Verse PBC</a></li>
+              <li><a href="https://www.verse-pbc.org/rabble" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Rabble</a></li>
             </ul>
           </div>
           
@@ -67,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} Social Media Bill of Rights. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Social Media Bill of Rights. All content licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" className="text-digital-purple-light hover:underline">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.</p>
         </div>
       </div>
     </footer>
