@@ -67,27 +67,6 @@ const Resources = () => {
           link: "/open-protocols-guide"
         }
       ]
-    },
-    {
-      title: "Educational Resources",
-      icon: <Book className="h-6 w-6" />,
-      resources: [
-        {
-          title: "Digital Rights 101",
-          description: "An introduction to digital rights concepts for the non-technical community leader.",
-          link: "#"
-        },
-        {
-          title: "The Fediverse Explained",
-          description: "Understanding how federated social networks work and why they matter.",
-          link: "#"
-        },
-        {
-          title: "Algorithmic Literacy Guide",
-          description: "How algorithms shape our digital experiences and how to take back control.",
-          link: "#"
-        }
-      ]
     }
   ];
 
