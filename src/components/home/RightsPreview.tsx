@@ -46,7 +46,7 @@ const RightsPreview = () => {
               The Five Fundamental Rights
             </h2>
             <p className="text-lg text-digital-gray-medium max-w-2xl">
-              As outlined by Rabble, these five rights form the foundation for digital liberation. In their work, they emphasize that these rights are essential for a just digital future.
+              These five fundamental rights should be the base expectations that anybody using social media should expect. These rights are essencial for us to have a free, open, and humane social media ecosystem.
             </p>
           </div>
           <div className="md:w-1/3 md:text-right mt-4 md:mt-0">
