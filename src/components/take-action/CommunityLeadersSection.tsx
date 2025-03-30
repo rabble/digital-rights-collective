@@ -5,7 +5,7 @@ import EducationCard from "./community-leaders/EducationCard";
 import GovernanceCard from "./community-leaders/GovernanceCard";
 import ConnectionCard from "./community-leaders/ConnectionCard";
 import LeadershipReminder from "./community-leaders/LeadershipReminder";
-import LeadersCTA from "./community-leaders/LeadersCTA";
+// Removed LeadersCTA import
 
 const CommunityLeadersSection = () => {
   return (
@@ -29,8 +29,7 @@ const CommunityLeadersSection = () => {
       {/* Conclusion */}
       <LeadershipReminder />
       
-      {/* CTA */}
-      <LeadersCTA />
+      {/* Removed LeadersCTA component */}
     </div>
   );
 };
