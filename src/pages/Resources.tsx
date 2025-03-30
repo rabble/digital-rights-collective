@@ -355,7 +355,7 @@ const Resources = () => {
                         <CardDescription className="text-base">
                           {resource.description}
                         </CardDescription>
-                      </CardFooter>
+                      </CardContent>
                       <CardFooter>
                         <Button variant="ghost" className="text-digital-blue" asChild>
                           {resource.internal ? (
