@@ -31,7 +31,7 @@ type Platform = {
   };
 };
 
-// Original platforms array with nos.social added as first Nostr app
+// Platforms array with nos.social removed as it's a Nostr client app, not a separate protocol
 const platforms: Platform[] = [
   {
     name: "Facebook/Meta",
@@ -199,30 +199,6 @@ const platforms: Platform[] = [
     governance: {
       rating: "Good",
       explanation: "Moderation still evolving but designed with community governance in mind."
-    }
-  },
-  {
-    name: "nos.social (Nostr)",
-    type: "Open Protocol",
-    privacy: {
-      rating: "Good",
-      explanation: "Cryptographic identity, ability to use anonymously, resilient to censorship."
-    },
-    ownership: {
-      rating: "Excellent",
-      explanation: "Complete ownership of your key-based identity and content, truly portable across clients."
-    },
-    interoperability: {
-      rating: "Excellent",
-      explanation: "Protocol-level interoperability between all clients, fully decentralized."
-    },
-    algorithmic: {
-      rating: "Good",
-      explanation: "Client-side control of content, relay selection provides filtering options."
-    },
-    governance: {
-      rating: "Good",
-      explanation: "Self-sovereign approach, individual choice of relays, community relays emerging."
     }
   },
   {
@@ -728,7 +704,7 @@ const PlatformComparisonTable = () => {
                     )}
                   </TableCell>
                   <TableCell className="align-top">
-                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                       {platform.type}
                     </span>
                   </TableCell>
@@ -778,7 +754,7 @@ const PlatformComparisonTable = () => {
                     {platform.name}
                   </TableCell>
                   <TableCell className="align-top">
-                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
                       {platform.type}
                     </span>
                   </TableCell>

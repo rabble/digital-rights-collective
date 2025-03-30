@@ -51,11 +51,6 @@ const Resources = () => {
           link: "https://nostr.com/"
         },
         {
-          title: "nos.social",
-          description: "A user-friendly Nostr client that provides a modern social media experience on the decentralized Nostr protocol.",
-          link: "https://nos.social/"
-        },
-        {
           title: "AT Protocol",
           description: "The protocol behind BlueSky, offering algorithmic choice and portable identity.",
           link: "https://atproto.com/"
@@ -65,6 +60,27 @@ const Resources = () => {
           description: "Our comprehensive guide to the Fediverse, Nostr, and Bluesky platforms.",
           internal: true,
           link: "/open-protocols-guide"
+        }
+      ]
+    },
+    {
+      title: "Client Applications",
+      icon: <Database className="h-6 w-6" />,
+      resources: [
+        {
+          title: "nos.social",
+          description: "A user-friendly Nostr client that provides a modern social media experience on the decentralized Nostr protocol.",
+          link: "https://nos.social/"
+        },
+        {
+          title: "Bluesky App",
+          description: "The official client for the AT Protocol, offering a clean interface and algorithmic choice.",
+          link: "https://bsky.app"
+        },
+        {
+          title: "Mastodon App",
+          description: "The reference implementation client for the Mastodon/Fediverse network.",
+          link: "https://joinmastodon.org"
         }
       ]
     }
