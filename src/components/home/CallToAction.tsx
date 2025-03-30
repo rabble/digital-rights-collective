@@ -17,21 +17,23 @@ const CallToAction = () => {
           </p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <Button
-              className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90 mb-4"
-              asChild
-            >
-              <a href="https://dashboard.mailerlite.com/forms/1225308/150286925399328477/share" target="_blank" rel="noopener noreferrer">
-                Join Our Newsletter
-              </a>
-            </Button>
-            
-            <Button
-              className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
-              asChild
-            >
-              <Link to="/endorse">Endorse the Bill of Rights</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
+                asChild
+              >
+                <a href="https://dashboard.mailerlite.com/forms/1225308/150286925399328477/share" target="_blank" rel="noopener noreferrer">
+                  Join Our Newsletter
+                </a>
+              </Button>
+              
+              <Button
+                className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
+                asChild
+              >
+                <Link to="/endorse">Endorse the Bill of Rights</Link>
+              </Button>
+            </div>
             
             <p className="text-xs text-white/70 mt-4">
               By joining, you'll receive updates on the movement and how you can take action.
