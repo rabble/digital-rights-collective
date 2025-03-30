@@ -46,10 +46,6 @@ const HeroSection = () => {
               </Link>
             </Button>
           </div>
-          
-          <p className="mt-8 text-white/70 text-sm">
-            By Evan Henshaw-Plath, technologist and community advocate
-          </p>
         </div>
       </div>
     </div>
