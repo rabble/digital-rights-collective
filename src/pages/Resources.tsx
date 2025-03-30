@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Link } from "react-router-dom";
 
 const Resources = () => {
   const dwebPrinciples = [
@@ -53,6 +54,12 @@ const Resources = () => {
           title: "AT Protocol",
           description: "The protocol behind BlueSky, offering algorithmic choice and portable identity.",
           link: "https://atproto.com/"
+        },
+        {
+          title: "Navigating Open Social Media Protocols",
+          description: "Our comprehensive guide to the Fediverse, Nostr, and Bluesky platforms.",
+          internal: true,
+          link: "/open-protocols-guide"
         }
       ]
     },
@@ -317,6 +324,26 @@ const Resources = () => {
               Resource Library
             </h2>
             
+            <div className="bg-gradient-to-r from-digital-purple-light to-digital-purple p-8 rounded-xl text-white mb-12">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">New Guide: Navigating Open Social Media Protocols</h3>
+                  <p className="mb-4">
+                    Explore our comprehensive guide to the Fediverse, Nostr, and Bluesky. Learn how these open 
+                    platforms support digital rights and offer alternatives to centralized social media.
+                  </p>
+                  <Button className="bg-white text-digital-purple hover:bg-gray-100" asChild>
+                    <Link to="/open-protocols-guide">
+                      Read the Guide
+                    </Link>
+                  </Button>
+                </div>
+                <div className="hidden md:block">
+                  <Globe className="h-24 w-24 opacity-75" />
+                </div>
+              </div>
+            </div>
+            
             <div className="prose prose-lg max-w-none mb-12">
               <p>
                 Whether you're a community leader looking to migrate your group to a more rights-respecting 
@@ -347,9 +374,15 @@ const Resources = () => {
                       </CardContent>
                       <CardFooter>
                         <Button variant="ghost" className="text-digital-blue" asChild>
-                          <a href={resource.link} target="_blank" rel="noopener noreferrer">
-                            Visit Resource <ExternalLink className="ml-2 h-4 w-4" />
-                          </a>
+                          {resource.internal ? (
+                            <Link to={resource.link}>
+                              View Guide <ExternalLink className="ml-2 h-4 w-4" />
+                            </Link>
+                          ) : (
+                            <a href={resource.link} target="_blank" rel="noopener noreferrer">
+                              Visit Resource <ExternalLink className="ml-2 h-4 w-4" />
+                            </a>
+                          )}
                         </Button>
                       </CardFooter>
                     </Card>

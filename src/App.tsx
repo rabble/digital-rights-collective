@@ -13,6 +13,7 @@ import Resources from "./pages/Resources";
 import TakeAction from "./pages/TakeAction";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import OpenProtocolsGuide from "./pages/OpenProtocolsGuide";
 
 // Initialize the query client
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/bill-of-rights" element={<BillOfRights />} />
             <Route path="/platform-comparison" element={<PlatformComparison />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/open-protocols-guide" element={<OpenProtocolsGuide />} />
             <Route path="/take-action" element={<TakeAction />} />
             <Route path="/about" element={<AboutAuthor />} />
             <Route path="/faq" element={<FAQ />} />
