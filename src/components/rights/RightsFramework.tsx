@@ -14,9 +14,8 @@ const RightsFramework = () => {
           </p>
           <div className="flex justify-center">
             <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white/20 text-white hover:bg-white/10 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-digital-gray-dark"
+              className="bg-digital-purple text-white hover:bg-digital-purple-dark focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-digital-gray-dark"
+              size="lg"
               asChild
             >
               <Link to="/platform-comparison" aria-label="Compare current social media platforms">
