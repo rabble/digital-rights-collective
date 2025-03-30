@@ -123,8 +123,10 @@ const AboutAuthor = () => {
                     If you're a journalist or content creator interested in covering the Social Media 
                     Bill of Rights initiative, please get in touch.
                   </p>
-                  <Button className="w-full bg-digital-purple hover:bg-digital-purple-dark text-white">
-                    Contact Press Team
+                  <Button className="w-full bg-digital-purple hover:bg-digital-purple-dark text-white" asChild>
+                    <a href="mailto:alice@flockmktg.com">
+                      Contact Press Team
+                    </a>
                   </Button>
                 </div>
                 
@@ -136,8 +138,10 @@ const AboutAuthor = () => {
                     Interested in having Rabble speak at your event about digital rights, 
                     community technology, or the future of social media?
                   </p>
-                  <Button className="w-full bg-digital-purple hover:bg-digital-purple-dark text-white">
-                    Book a Speaking Engagement
+                  <Button className="w-full bg-digital-purple hover:bg-digital-purple-dark text-white" asChild>
+                    <a href="mailto:alice@flockmktg.com">
+                      Book a Speaking Engagement
+                    </a>
                   </Button>
                 </div>
               </div>
