@@ -51,6 +51,11 @@ const Resources = () => {
           link: "https://nostr.com/"
         },
         {
+          title: "nos.social",
+          description: "A user-friendly Nostr client that provides a modern social media experience on the decentralized Nostr protocol.",
+          link: "https://nos.social/"
+        },
+        {
           title: "AT Protocol",
           description: "The protocol behind BlueSky, offering algorithmic choice and portable identity.",
           link: "https://atproto.com/"

@@ -32,6 +32,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Open Protocols</h4>
             <ul className="space-y-2">
               <li><a href="https://joinmastodon.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Mastodon/Fediverse</a></li>
+              <li><a href="https://nos.social" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">nos.social (Nostr)</a></li>
               <li><a href="https://nostr.com" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Nostr</a></li>
               <li><a href="https://bsky.app" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">BlueSky</a></li>
               <li><a href="https://signal.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Signal</a></li>

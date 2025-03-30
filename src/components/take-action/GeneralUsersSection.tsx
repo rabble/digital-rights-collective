@@ -1,4 +1,3 @@
-
 import { ExternalLink, Share2, Lightbulb, Link, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -40,10 +39,13 @@ const GeneralUsersSection = () => {
                 <strong>Try Mastodon</strong> (<a href="https://joinmastodon.org" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">joinmastodon.org</a>) - A Twitter/X alternative where no single company controls your experience
               </li>
               <li>
-                <strong>Explore BlueSky</strong> (<a href="https://bsky.app" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">bsky.app</a>) - Experience algorithm choice and portable identity
+                <strong>Use nos.social</strong> (<a href="https://nos.social" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">nos.social</a>) - A user-friendly client for the Nostr protocol
               </li>
               <li>
                 <strong>Check out Nostr</strong> (<a href="https://nostr.com" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">nostr.com</a>) - See what truly censorship-resistant communication feels like
+              </li>
+              <li>
+                <strong>Explore BlueSky</strong> (<a href="https://bsky.app" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">bsky.app</a>) - Experience algorithm choice and portable identity
               </li>
               <li>
                 <strong>Use Signal</strong> (<a href="https://signal.org" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">signal.org</a>) - Communicate privately without surveillance

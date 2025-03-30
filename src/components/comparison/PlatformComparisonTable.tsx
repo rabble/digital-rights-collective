@@ -1,4 +1,3 @@
-
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -32,7 +31,7 @@ type Platform = {
   };
 };
 
-// Original platforms array
+// Original platforms array with nos.social added as first Nostr app
 const platforms: Platform[] = [
   {
     name: "Facebook/Meta",
@@ -200,6 +199,30 @@ const platforms: Platform[] = [
     governance: {
       rating: "Good",
       explanation: "Moderation still evolving but designed with community governance in mind."
+    }
+  },
+  {
+    name: "nos.social (Nostr)",
+    type: "Open Protocol",
+    privacy: {
+      rating: "Good",
+      explanation: "Cryptographic identity, ability to use anonymously, resilient to censorship."
+    },
+    ownership: {
+      rating: "Excellent",
+      explanation: "Complete ownership of your key-based identity and content, truly portable across clients."
+    },
+    interoperability: {
+      rating: "Excellent",
+      explanation: "Protocol-level interoperability between all clients, fully decentralized."
+    },
+    algorithmic: {
+      rating: "Good",
+      explanation: "Client-side control of content, relay selection provides filtering options."
+    },
+    governance: {
+      rating: "Good",
+      explanation: "Self-sovereign approach, individual choice of relays, community relays emerging."
     }
   },
   {
