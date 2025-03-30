@@ -2,8 +2,10 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PlatformRating from "./PlatformRating";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Info } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 type Platform = {
   name: string;
@@ -279,167 +281,524 @@ const openProtocols = platforms.filter(platform => platform.type === "Open Proto
 const corporatePlatforms = platforms.filter(platform => platform.type === "Corporate");
 
 const PlatformComparisonTable = () => {
-  return (
-    <Card className="overflow-hidden border-0 shadow-md">
-      <div className="p-6 bg-gradient-to-r from-digital-gray-light to-white">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-          <div className="flex items-center">
-            <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 mr-2 shadow-sm">
-              Open Protocol
-            </span>
-            <span className="text-sm text-gray-700">
-              Community-driven platforms based on open standards
-            </span>
-          </div>
-          <div className="flex items-center">
-            <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-red-100 text-red-800 mr-2 shadow-sm">
-              Corporate
-            </span>
-            <span className="text-sm text-gray-700">
-              Centrally-controlled commercial platforms
-            </span>
-          </div>
-        </div>
-        <div className="text-sm text-gray-600">
-          <p className="mb-2">
-            <strong>Rating Key:</strong>
-          </p>
-          <div className="flex flex-wrap gap-6">
+  const isMobile = useIsMobile();
+
+  // Mobile view renders tabs for different categories
+  const renderMobileView = () => {
+    return (
+      <Tabs defaultValue="privacy" className="w-full">
+        <div className="px-4 py-3 bg-gradient-to-r from-digital-gray-light to-white">
+          <div className="mb-4">
+            <div className="flex items-center mb-2">
+              <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mr-2 shadow-sm">
+                Open Protocol
+              </span>
+              <span className="text-xs text-gray-700">
+                Community-driven
+              </span>
+            </div>
             <div className="flex items-center">
-              <span className="h-3 w-3 rounded-full bg-red-500 mr-2"></span>
+              <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mr-2 shadow-sm">
+                Corporate
+              </span>
+              <span className="text-xs text-gray-700">
+                Centrally-controlled
+              </span>
+            </div>
+          </div>
+          
+          <div className="text-xs text-gray-600 flex flex-wrap gap-3 mb-2">
+            <div className="flex items-center">
+              <span className="h-2 w-2 rounded-full bg-red-500 mr-1"></span>
               <span>Poor</span>
             </div>
             <div className="flex items-center">
-              <span className="h-3 w-3 rounded-full bg-orange-500 mr-2"></span>
+              <span className="h-2 w-2 rounded-full bg-orange-500 mr-1"></span>
               <span>Fair</span>
             </div>
             <div className="flex items-center">
-              <span className="h-3 w-3 rounded-full bg-green-500 mr-2"></span>
+              <span className="h-2 w-2 rounded-full bg-green-500 mr-1"></span>
               <span>Good</span>
             </div>
             <div className="flex items-center">
-              <span className="h-3 w-3 rounded-full bg-digital-purple mr-2"></span>
+              <span className="h-2 w-2 rounded-full bg-digital-purple mr-1"></span>
               <span>Excellent</span>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="overflow-x-auto">
-        <Table>
-          <TableHeader className="bg-gray-50">
-            <TableRow>
-              <TableHead className="min-w-[150px] font-bold">Platform</TableHead>
-              <TableHead className="font-bold">Type</TableHead>
-              <TableHead className="font-bold">Privacy & Security</TableHead>
-              <TableHead className="font-bold">Ownership</TableHead>
-              <TableHead className="font-bold">Interoperability</TableHead>
-              <TableHead className="font-bold">Algorithmic Control</TableHead>
-              <TableHead className="font-bold">Self-governance</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {/* Open Protocols Section */}
+        
+        <TabsList className="w-full overflow-x-auto flex-nowrap justify-start p-0 h-auto bg-transparent space-x-1 mb-2">
+          <TabsTrigger 
+            value="privacy" 
+            className="text-xs py-2 px-3 whitespace-nowrap data-[state=active]:bg-digital-purple data-[state=active]:text-white"
+          >
+            Privacy
+          </TabsTrigger>
+          <TabsTrigger 
+            value="ownership" 
+            className="text-xs py-2 px-3 whitespace-nowrap data-[state=active]:bg-digital-purple data-[state=active]:text-white"
+          >
+            Ownership
+          </TabsTrigger>
+          <TabsTrigger 
+            value="interoperability" 
+            className="text-xs py-2 px-3 whitespace-nowrap data-[state=active]:bg-digital-purple data-[state=active]:text-white"
+          >
+            Interoperability
+          </TabsTrigger>
+          <TabsTrigger 
+            value="algorithmic" 
+            className="text-xs py-2 px-3 whitespace-nowrap data-[state=active]:bg-digital-purple data-[state=active]:text-white"
+          >
+            Algorithms
+          </TabsTrigger>
+          <TabsTrigger 
+            value="governance" 
+            className="text-xs py-2 px-3 whitespace-nowrap data-[state=active]:bg-digital-purple data-[state=active]:text-white"
+          >
+            Governance
+          </TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="privacy" className="mt-0">
+          <div className="bg-gray-50 p-2 rounded-md mb-2">
+            <h3 className="font-medium text-sm">Privacy & Security</h3>
+            <p className="text-xs text-gray-600">How well platforms protect user data and communications</p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-medium text-sm text-digital-purple px-2">Open Protocols</h4>
             {openProtocols.map((platform) => (
-              <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
-                <TableCell className="font-medium text-digital-purple flex items-center align-top">
-                  {platform.name}
-                  {platform.name === "Mastodon/Fediverse" && (
-                    <ExternalLink className="ml-1 w-3 h-3 text-gray-400" />
-                  )}
-                </TableCell>
-                <TableCell className="align-top">
-                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
-                    {platform.type}
-                  </span>
-                </TableCell>
-                <TableCell className="align-top">
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-purple flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.privacy.rating}
                     explanation={platform.privacy.explanation}
+                    compact={true}
                   />
-                </TableCell>
-                <TableCell className="align-top">
-                  <PlatformRating
-                    rating={platform.ownership.rating}
-                    explanation={platform.ownership.explanation}
-                  />
-                </TableCell>
-                <TableCell className="align-top">
-                  <PlatformRating
-                    rating={platform.interoperability.rating}
-                    explanation={platform.interoperability.explanation}
-                  />
-                </TableCell>
-                <TableCell className="align-top">
-                  <PlatformRating
-                    rating={platform.algorithmic.rating}
-                    explanation={platform.algorithmic.explanation}
-                  />
-                </TableCell>
-                <TableCell className="align-top">
-                  <PlatformRating
-                    rating={platform.governance.rating}
-                    explanation={platform.governance.explanation}
-                  />
-                </TableCell>
-              </TableRow>
+                </div>
+              </Card>
             ))}
             
-            {/* Corporate Platforms Section with divider */}
-            <TableRow>
-              <TableCell colSpan={7} className="p-0">
-                <div className="h-3 bg-gray-50 border-y border-gray-200"></div>
-              </TableCell>
-            </TableRow>
-            
+            <h4 className="font-medium text-sm text-digital-gray-dark px-2 pt-2">Corporate Platforms</h4>
             {corporatePlatforms.map((platform) => (
-              <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
-                <TableCell className="font-medium text-digital-gray-dark align-top">
-                  {platform.name}
-                </TableCell>
-                <TableCell className="align-top">
-                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
-                    {platform.type}
-                  </span>
-                </TableCell>
-                <TableCell className="align-top">
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-gray-dark flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.privacy.rating}
                     explanation={platform.privacy.explanation}
+                    compact={true}
                   />
-                </TableCell>
-                <TableCell className="align-top">
+                </div>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="ownership" className="mt-0">
+          <div className="bg-gray-50 p-2 rounded-md mb-2">
+            <h3 className="font-medium text-sm">Ownership</h3>
+            <p className="text-xs text-gray-600">User control over their data and content</p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-medium text-sm text-digital-purple px-2">Open Protocols</h4>
+            {openProtocols.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-purple flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.ownership.rating}
                     explanation={platform.ownership.explanation}
+                    compact={true}
                   />
-                </TableCell>
-                <TableCell className="align-top">
+                </div>
+              </Card>
+            ))}
+            
+            <h4 className="font-medium text-sm text-digital-gray-dark px-2 pt-2">Corporate Platforms</h4>
+            {corporatePlatforms.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-gray-dark flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
+                  <PlatformRating
+                    rating={platform.ownership.rating}
+                    explanation={platform.ownership.explanation}
+                    compact={true}
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="interoperability" className="mt-0">
+          <div className="bg-gray-50 p-2 rounded-md mb-2">
+            <h3 className="font-medium text-sm">Interoperability</h3>
+            <p className="text-xs text-gray-600">Ability to connect with other platforms and services</p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-medium text-sm text-digital-purple px-2">Open Protocols</h4>
+            {openProtocols.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-purple flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.interoperability.rating}
                     explanation={platform.interoperability.explanation}
+                    compact={true}
                   />
-                </TableCell>
-                <TableCell className="align-top">
+                </div>
+              </Card>
+            ))}
+            
+            <h4 className="font-medium text-sm text-digital-gray-dark px-2 pt-2">Corporate Platforms</h4>
+            {corporatePlatforms.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-gray-dark flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
+                  <PlatformRating
+                    rating={platform.interoperability.rating}
+                    explanation={platform.interoperability.explanation}
+                    compact={true}
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="algorithmic" className="mt-0">
+          <div className="bg-gray-50 p-2 rounded-md mb-2">
+            <h3 className="font-medium text-sm">Algorithmic Control</h3>
+            <p className="text-xs text-gray-600">Transparency and user control over content algorithms</p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-medium text-sm text-digital-purple px-2">Open Protocols</h4>
+            {openProtocols.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-purple flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.algorithmic.rating}
                     explanation={platform.algorithmic.explanation}
+                    compact={true}
                   />
-                </TableCell>
-                <TableCell className="align-top">
+                </div>
+              </Card>
+            ))}
+            
+            <h4 className="font-medium text-sm text-digital-gray-dark px-2 pt-2">Corporate Platforms</h4>
+            {corporatePlatforms.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-gray-dark flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
+                  <PlatformRating
+                    rating={platform.algorithmic.rating}
+                    explanation={platform.algorithmic.explanation}
+                    compact={true}
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="governance" className="mt-0">
+          <div className="bg-gray-50 p-2 rounded-md mb-2">
+            <h3 className="font-medium text-sm">Self-governance</h3>
+            <p className="text-xs text-gray-600">User and community control over platform rules and moderation</p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-medium text-sm text-digital-purple px-2">Open Protocols</h4>
+            {openProtocols.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-purple flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
                   <PlatformRating
                     rating={platform.governance.rating}
                     explanation={platform.governance.explanation}
+                    compact={true}
                   />
+                </div>
+              </Card>
+            ))}
+            
+            <h4 className="font-medium text-sm text-digital-gray-dark px-2 pt-2">Corporate Platforms</h4>
+            {corporatePlatforms.map((platform) => (
+              <Card key={platform.name} className="overflow-hidden border shadow-sm">
+                <div className="p-3 flex justify-between items-center bg-gray-50 border-b">
+                  <div className="font-medium text-sm text-digital-gray-dark flex items-center">
+                    {platform.name}
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3">
+                  <PlatformRating
+                    rating={platform.governance.rating}
+                    explanation={platform.governance.explanation}
+                    compact={true}
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
+    );
+  };
+
+  // Desktop view renders the full table
+  const renderDesktopView = () => {
+    return (
+      <Card className="overflow-hidden border-0 shadow-md">
+        <div className="p-4 md:p-6 bg-gradient-to-r from-digital-gray-light to-white">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+            <div className="flex items-center">
+              <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 mr-2 shadow-sm">
+                Open Protocol
+              </span>
+              <span className="text-sm text-gray-700">
+                Community-driven platforms based on open standards
+              </span>
+            </div>
+            <div className="flex items-center">
+              <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-red-100 text-red-800 mr-2 shadow-sm">
+                Corporate
+              </span>
+              <span className="text-sm text-gray-700">
+                Centrally-controlled commercial platforms
+              </span>
+            </div>
+          </div>
+          <div className="text-sm text-gray-600">
+            <p className="mb-2">
+              <strong>Rating Key:</strong>
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <div className="flex items-center">
+                <span className="h-3 w-3 rounded-full bg-red-500 mr-2"></span>
+                <span>Poor</span>
+              </div>
+              <div className="flex items-center">
+                <span className="h-3 w-3 rounded-full bg-orange-500 mr-2"></span>
+                <span>Fair</span>
+              </div>
+              <div className="flex items-center">
+                <span className="h-3 w-3 rounded-full bg-green-500 mr-2"></span>
+                <span>Good</span>
+              </div>
+              <div className="flex items-center">
+                <span className="h-3 w-3 rounded-full bg-digital-purple mr-2"></span>
+                <span>Excellent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader className="bg-gray-50 sticky top-0 z-10">
+              <TableRow>
+                <TableHead className="min-w-[150px] font-bold">Platform</TableHead>
+                <TableHead className="font-bold">Type</TableHead>
+                <TableHead className="font-bold">Privacy & Security</TableHead>
+                <TableHead className="font-bold">Ownership</TableHead>
+                <TableHead className="font-bold">Interoperability</TableHead>
+                <TableHead className="font-bold">Algorithmic Control</TableHead>
+                <TableHead className="font-bold">Self-governance</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {/* Open Protocols Section */}
+              {openProtocols.map((platform) => (
+                <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
+                  <TableCell className="font-medium text-digital-purple flex items-center align-top">
+                    {platform.name}
+                    {platform.name === "Mastodon/Fediverse" && (
+                      <ExternalLink className="ml-1 w-3 h-3 text-gray-400" />
+                    )}
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                      {platform.type}
+                    </span>
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.privacy.rating}
+                      explanation={platform.privacy.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.ownership.rating}
+                      explanation={platform.ownership.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.interoperability.rating}
+                      explanation={platform.interoperability.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.algorithmic.rating}
+                      explanation={platform.algorithmic.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.governance.rating}
+                      explanation={platform.governance.explanation}
+                    />
+                  </TableCell>
+                </TableRow>
+              ))}
+              
+              {/* Corporate Platforms Section with divider */}
+              <TableRow>
+                <TableCell colSpan={7} className="p-0">
+                  <div className="h-3 bg-gray-50 border-y border-gray-200"></div>
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </Card>
-  );
+              
+              {corporatePlatforms.map((platform) => (
+                <TableRow key={platform.name} className="hover:bg-gray-50/80 transition-colors">
+                  <TableCell className="font-medium text-digital-gray-dark align-top">
+                    {platform.name}
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                      {platform.type}
+                    </span>
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.privacy.rating}
+                      explanation={platform.privacy.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.ownership.rating}
+                      explanation={platform.ownership.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.interoperability.rating}
+                      explanation={platform.interoperability.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.algorithmic.rating}
+                      explanation={platform.algorithmic.explanation}
+                    />
+                  </TableCell>
+                  <TableCell className="align-top">
+                    <PlatformRating
+                      rating={platform.governance.rating}
+                      explanation={platform.governance.explanation}
+                    />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </Card>
+    );
+  };
+
+  return isMobile ? renderMobileView() : renderDesktopView();
 };
 
 export default PlatformComparisonTable;
