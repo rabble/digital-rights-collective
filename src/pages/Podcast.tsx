@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Headphones, Calendar, Clock, ExternalLink, ArrowRight } from "lucide-react";
+import { Headphones, Calendar, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const PodcastEpisode = ({
@@ -53,32 +53,7 @@ const PodcastEpisode = ({
 };
 
 const Podcast = () => {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.ml) {
-      window.ml('show', {
-        selector: '.ml-embedded',
-        display: 'inline'
-      });
-    }
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Thanks for subscribing!",
-        description: "You'll be notified when new podcast episodes are released.",
-      });
-      setEmail("");
-    }, 1000);
-  };
 
   return (
     <Layout>
@@ -102,7 +77,11 @@ const Podcast = () => {
                   on the Social Media Bill of Rights movement.
                 </p>
                 
-                <div className="ml-embedded" data-form="OuZTW0"></div>
+                <Button className="w-full bg-digital-purple-light hover:bg-digital-purple-light/90" asChild>
+                  <a href="https://dashboard.mailerlite.com/forms/1225308/150286925399328477/share" target="_blank" rel="noopener noreferrer">
+                    Join Our Newsletter
+                  </a>
+                </Button>
               </div>
             </div>
             
