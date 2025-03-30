@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const AboutAuthor = () => {
   return (
@@ -23,7 +24,11 @@ const AboutAuthor = () => {
             <div className="md:flex gap-12 items-start">
               <div className="md:w-1/3 mb-8 md:mb-0">
                 <div className="bg-digital-gray-light rounded-xl overflow-hidden mb-6">
-                  <div className="aspect-square bg-digital-purple/20"></div>
+                  <img 
+                    src="/lovable-uploads/c608de28-d3d1-49d7-81b1-2bd57ca71047.png" 
+                    alt="Rabble (Evan Henshaw-Plath)" 
+                    className="w-full h-auto aspect-square object-cover"
+                  />
                 </div>
                 
                 <div className="space-y-4">
