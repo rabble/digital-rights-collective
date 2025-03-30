@@ -61,8 +61,8 @@ const Header = () => {
           <Link to="/about" className="hover:text-digital-purple-light transition-colors">
             About
           </Link>
-          <Button className="bg-digital-coral hover:bg-digital-coral/90 text-white">
-            Endorse
+          <Button className="bg-digital-coral hover:bg-digital-coral/90 text-white" asChild>
+            <Link to="/endorse">Endorse</Link>
           </Button>
         </nav>
 
@@ -115,8 +115,9 @@ const Header = () => {
               <Button 
                 className="bg-digital-coral hover:bg-digital-coral/90 text-white w-full"
                 onClick={() => setIsMenuOpen(false)}
+                asChild
               >
-                Endorse
+                <Link to="/endorse">Endorse</Link>
               </Button>
             </nav>
           </div>

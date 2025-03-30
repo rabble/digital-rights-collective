@@ -14,6 +14,7 @@ import TakeAction from "./pages/TakeAction";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import OpenProtocolsGuide from "./pages/OpenProtocolsGuide";
+import Endorse from "./pages/Endorse";
 
 // Initialize the query client
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/take-action" element={<TakeAction />} />
             <Route path="/about" element={<AboutAuthor />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/endorse" element={<Endorse />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

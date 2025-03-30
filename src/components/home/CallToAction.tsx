@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   const [email, setEmail] = useState("");
@@ -75,14 +76,23 @@ const CallToAction = () => {
                 </div>
               </div>
               
-              <Button 
-                type="submit"
-                className="w-full bg-digital-coral hover:bg-digital-coral/90"
-                disabled={loading}
-                aria-busy={loading}
-              >
-                {loading ? "Joining..." : "Endorse the Bill of Rights"}
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  type="submit"
+                  className="w-full sm:w-auto bg-digital-coral hover:bg-digital-coral/90"
+                  disabled={loading}
+                  aria-busy={loading}
+                >
+                  {loading ? "Joining..." : "Join the Newsletter"}
+                </Button>
+
+                <Button
+                  className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
+                  asChild
+                >
+                  <Link to="/endorse">Endorse the Bill of Rights</Link>
+                </Button>
+              </div>
               
               <p className="text-xs text-white/70">
                 By joining, you'll receive updates on the movement and how you can take action.
