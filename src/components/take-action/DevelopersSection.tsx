@@ -1,4 +1,3 @@
-
 import { Code, ExternalLink, Github, ShieldCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -336,8 +335,13 @@ const DevelopersSection = () => {
             Join our developer community to share resources, discuss technical challenges, and collaborate on projects that advance digital rights.
           </p>
           
-          <Button className="bg-digital-coral hover:bg-digital-coral/90 text-white">
-            Join the Developer Network
+          <Button 
+            className="bg-digital-coral hover:bg-digital-coral/90 text-white"
+            asChild
+          >
+            <a href="https://dashboard.mailerlite.com/forms/1225308/150286925399328477/share" target="_blank" rel="noopener noreferrer">
+              Join the Developer Network
+            </a>
           </Button>
         </div>
       </div>

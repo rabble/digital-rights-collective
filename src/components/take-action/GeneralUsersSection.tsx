@@ -226,8 +226,13 @@ const GeneralUsersSection = () => {
             Join our mailing list for more detailed guides, success stories, and movement updates as we build a better social media landscape together.
           </p>
           
-          <Button className="bg-digital-coral hover:bg-digital-coral/90 text-white">
-            Join the Movement
+          <Button 
+            className="bg-digital-coral hover:bg-digital-coral/90 text-white"
+            asChild
+          >
+            <a href="https://dashboard.mailerlite.com/forms/1225308/150286925399328477/share" target="_blank" rel="noopener noreferrer">
+              Join the Movement
+            </a>
           </Button>
         </div>
       </div>
