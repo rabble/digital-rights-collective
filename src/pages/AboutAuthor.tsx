@@ -151,7 +151,7 @@ const AboutAuthor = () => {
                   collaboration opportunities, or other questions, please email:
                 </p>
                 <p className="text-digital-purple font-semibold mt-2">
-                  contact@socialmediabillofrights.org
+                  rabble@nos.social
                 </p>
               </div>
             </div>
