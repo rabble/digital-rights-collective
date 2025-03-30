@@ -72,15 +72,15 @@ const AboutAuthor = () => {
                   </p>
                   
                   <p>
-                    Throughout his career, Rabble has been dedicated to building technologies that empower 
-                    communities rather than exploit them. He has worked with activist groups, open-source 
+                    Throughout their career, Rabble has been dedicated to building technologies that empower 
+                    communities rather than exploit them. They have worked with activist groups, open-source 
                     projects, and community organizers around the world to develop digital tools that respect 
                     user rights and enable collective governance.
                   </p>
                   
                   <p>
                     The Social Media Bill of Rights initiative draws on Rabble's extensive experience at the 
-                    intersection of technology and community organizing. It represents his vision for 
+                    intersection of technology and community organizing. It represents their vision for 
                     reclaiming our digital commons from corporate control and building a more equitable, 
                     community-governed internet.
                   </p>
@@ -88,7 +88,7 @@ const AboutAuthor = () => {
                   <p>
                     Beyond advocacy, Rabble is actively working with a network of developers, designers, and 
                     community leaders to build the next generation of social platforms based on open protocols 
-                    and community governance. He believes that the technical foundations for a better social 
+                    and community governance. They believe that the technical foundations for a better social 
                     media landscape already exist – what's needed now is the social movement to make it a reality.
                   </p>
                 </div>
