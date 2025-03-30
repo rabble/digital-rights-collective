@@ -78,7 +78,7 @@ const RightsPreview = () => {
         </div>
         
         <div className="mt-8 text-center text-digital-gray-medium text-sm max-w-4xl mx-auto">
-          <p>Based on Rabble's framework for digital community rights. They have spent decades building social technologies, including their work at Odeo (which became Twitter) where they were the social app's first employee and de facto CTO until late 2006.</p>
+          <p>These fundamental rights are essential for building a healthy, open social media ecosystem that prioritizes user agency, community well-being, and sustainable digital spaces. Embracing these principles is crucial as we work toward a more equitable and human-centered internet.</p>
         </div>
       </div>
     </section>
