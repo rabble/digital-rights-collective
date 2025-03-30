@@ -8,7 +8,7 @@ const RightsPrinciples = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-digital-gray-dark">
-              Five Core Principles
+              Five Rights Of Social Media
             </h2>
             <p className="text-lg text-digital-gray-medium max-w-3xl mx-auto">
               These rights are not just aspirational; they are the foundation for building a more equitable, 
