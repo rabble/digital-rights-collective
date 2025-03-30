@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart, Users, BookOpen } from "lucide-react";
+import { Book, Code, ExternalLink, Link2, Lightbulb, Globe, Shield, Database, Shuffle, LineChart, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -53,27 +53,6 @@ const Resources = () => {
           title: "AT Protocol",
           description: "The protocol behind BlueSky, offering algorithmic choice and portable identity.",
           link: "https://atproto.com/"
-        }
-      ]
-    },
-    {
-      title: "Community Tools",
-      icon: <MessageCircle className="h-6 w-6" />,
-      resources: [
-        {
-          title: "Matrix.org",
-          description: "An open standard for secure, decentralized real-time communication.",
-          link: "https://matrix.org/"
-        },
-        {
-          title: "Lemmy",
-          description: "A self-hosted social link aggregation and discussion platform.",
-          link: "https://join-lemmy.org/"
-        },
-        {
-          title: "PeerTube",
-          description: "A decentralized alternative to video platforms like YouTube.",
-          link: "https://joinpeertube.org/"
         }
       ]
     },
