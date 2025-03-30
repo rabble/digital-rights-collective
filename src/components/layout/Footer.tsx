@@ -11,6 +11,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Social Media Bill of Rights</h3>
             <p className="text-gray-400">
               Building a movement for digital rights in social media.
+              <br /><br />
+              This site is produced by <a href="https://www.verse-pbc.org/rabble" target="_blank" rel="noopener noreferrer" className="text-digital-purple-light hover:underline">@rabble</a> and the <a href="https://www.verse-pbc.org" target="_blank" rel="noopener noreferrer" className="text-digital-purple-light hover:underline">Verse Public Benefit Corporation</a>
             </p>
           </div>
           
@@ -33,8 +35,6 @@ const Footer = () => {
               <li><a href="https://nostr.com" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Nostr</a></li>
               <li><a href="https://bsky.app" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">BlueSky</a></li>
               <li><a href="https://signal.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Signal</a></li>
-              <li><a href="https://www.verse-pbc.org" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Verse PBC</a></li>
-              <li><a href="https://www.verse-pbc.org/rabble" target="_blank" rel="noopener noreferrer" className="hover:text-digital-purple-light transition-colors">Rabble</a></li>
             </ul>
           </div>
           

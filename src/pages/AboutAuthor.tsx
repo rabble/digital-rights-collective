@@ -48,6 +48,12 @@ const AboutAuthor = () => {
               
               <div className="md:w-2/3">
                 <div className="prose prose-lg max-w-none">
+                  <div className="bg-digital-purple/10 p-4 mb-6 rounded-md">
+                    <p className="text-digital-purple-dark font-medium">
+                      This site is produced by <a href="https://www.verse-pbc.org/rabble" target="_blank" rel="noopener noreferrer" className="text-digital-purple hover:underline">@rabble</a> and the <a href="https://www.verse-pbc.org" target="_blank" rel="noopener noreferrer" className="text-digital-purple hover:underline">Verse Public Benefit Corporation</a>
+                    </p>
+                  </div>
+                  
                   <p>
                     Evan Henshaw-Plath is a technologist and community advocate who has been building social 
                     technologies for over two decades, including early work on Twitter and decentralized 
