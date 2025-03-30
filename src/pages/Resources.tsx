@@ -1,9 +1,9 @@
-
 import Layout from "@/components/layout/Layout";
-import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart, Users } from "lucide-react";
+import { Book, Code, ExternalLink, Link2, Lightbulb, MessageCircle, Globe, Shield, Database, Shuffle, LineChart, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Resources = () => {
   const dwebPrinciples = [
@@ -144,6 +144,65 @@ const Resources = () => {
     }
   ];
 
+  const recommendedBooks = [
+    {
+      title: "Design Justice",
+      author: "Sasha Costanza-Chock",
+      year: "2020",
+      description: "Design Justice explores how design might be led by marginalized communities to challenge structural inequalities. It shows how to center people who are too often marginalized by design.",
+      link: "https://mitpress.mit.edu/books/design-justice"
+    },
+    {
+      title: "Race After Technology",
+      author: "Ruha Benjamin",
+      year: "2019",
+      description: "Explores how new technologies could reinforce White supremacy and deepen social inequity, arguing that automation has the potential to hide, speed up, and deepen discrimination.",
+      link: "https://www.ruhabenjamin.com/race-after-technology"
+    },
+    {
+      title: "Algorithms of Oppression",
+      author: "Safiya Umoja Noble",
+      year: "2018",
+      description: "Challenges the idea that search engines like Google offer an equal playing field for all forms of ideas, identities, and activities. Shows how algorithms reinforce negative biases against people of color.",
+      link: "https://nyupress.org/9781479837243/algorithms-of-oppression/"
+    },
+    {
+      title: "Platform Capitalism",
+      author: "Nick Srnicek",
+      year: "2017",
+      description: "Examines the rise of platform-based businesses from Google and Facebook to Airbnb and discusses how these platforms extract data as raw material for profit.",
+      link: "https://politybooks.com/bookdetail/?isbn=9781509504879"
+    },
+    {
+      title: "New Dark Age",
+      author: "James Bridle",
+      year: "2018", 
+      description: "Explores how technology is clouding our understanding of the world, arguing that the proliferation of information has led to a new kind of ignorance.",
+      link: "https://www.versobooks.com/books/3002-new-dark-age"
+    },
+    {
+      title: "Twitter and Tear Gas",
+      author: "Zeynep Tufekci",
+      year: "2017",
+      description: "An examination of how social media has transformed protest movements and political organizing, along with its limitations and vulnerabilities to surveillance and censorship.",
+      link: "https://www.twitterandteargas.org/"
+    },
+    {
+      title: "Automation and the Future of Work",
+      author: "Aaron Benanav",
+      year: "2020",
+      description: "Challenges mainstream accounts of technological unemployment and proposes alternative approaches to building post-scarcity futures.",
+      link: "https://www.versobooks.com/books/3717-automation-and-the-future-of-work"
+    },
+    {
+      title: "The Age of Surveillance Capitalism",
+      author: "Shoshana Zuboff",
+      year: "2019",
+      description: "Reveals how the biggest tech companies are dealing in a new kind of marketplace called behavioral futures, where prediction products are bought and sold.",
+      link: "https://shoshanazuboff.com/book/about/"
+    }
+  ];
+
   return (
     <Layout>
       <div className="bg-gradient-to-r from-digital-gray-dark to-digital-purple-dark text-white py-16 md:py-24">
@@ -218,6 +277,50 @@ const Resources = () => {
               </p>
               <p className="text-right text-digital-gray-medium mt-2">— DWeb Community</p>
             </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="text-digital-purple">
+                <BookOpen className="h-8 w-8" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-digital-gray-dark">
+                Recommended Books
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none mb-8">
+              <p>
+                Explore these essential books that examine the intersection of technology, 
+                social justice, and digital rights. These works offer critical perspectives 
+                on how we can create more equitable digital futures.
+              </p>
+            </div>
+            
+            <ScrollArea className="h-[450px] md:h-[500px] rounded-md border border-gray-200 p-4">
+              <div className="grid grid-cols-1 gap-6">
+                {recommendedBooks.map((book, index) => (
+                  <Card key={index} className="h-full border-l-4 border-l-digital-purple">
+                    <CardHeader>
+                      <CardTitle className="text-xl">{book.title}</CardTitle>
+                      <CardDescription className="text-base font-medium">
+                        By {book.author} ({book.year})
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-digital-gray-medium">{book.description}</p>
+                    </CardContent>
+                    <CardFooter>
+                      <Button variant="ghost" className="text-digital-blue" asChild>
+                        <a href={book.link} target="_blank" rel="noopener noreferrer">
+                          Learn More <ExternalLink className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </ScrollArea>
           </div>
           
           <div className="max-w-4xl mx-auto mb-16">
