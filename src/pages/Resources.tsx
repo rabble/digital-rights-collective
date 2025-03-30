@@ -141,6 +141,16 @@ const Resources = () => {
       name: "Internet Archive",
       description: "Building a digital library of Internet sites and other cultural artifacts in digital form.",
       link: "https://archive.org/"
+    },
+    {
+      name: "NewPublic",
+      description: "Working to build digital public spaces that serve the common good, with research and ideas for better digital spaces.",
+      link: "https://newpublic.org/"
+    },
+    {
+      name: "Aspiration Tech",
+      description: "Connecting nonprofit organizations, foundations and social change initiatives to software solutions and technology skills that help them better carry out their missions.",
+      link: "https://aspirationtech.org/"
     }
   ];
 
