@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="bg-digital-gray-dark text-white py-4">
       <div className="container flex justify-between items-center">
-        <Link to="/" className="font-bold text-xl md:text-2xl">
+        <Link to="/" className="font-bold text-xl md:text-2xl mr-6">
           {isMobile ? (
             <>
               <span className="whitespace-nowrap">Social Media</span>
