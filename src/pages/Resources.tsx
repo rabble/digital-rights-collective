@@ -69,27 +69,6 @@ const Resources = () => {
       ]
     },
     {
-      title: "Migration Guides",
-      icon: <Link2 className="h-6 w-6" />,
-      resources: [
-        {
-          title: "Moving from Facebook to the Fediverse",
-          description: "A step-by-step guide for migrating your community from Facebook to Mastodon.",
-          link: "#"
-        },
-        {
-          title: "Twitter to BlueSky Migration",
-          description: "How to transition your Twitter community to BlueSky while maintaining connections.",
-          link: "#"
-        },
-        {
-          title: "Building a Community on Nostr",
-          description: "Best practices for establishing a community presence on the Nostr protocol.",
-          link: "#"
-        }
-      ]
-    },
-    {
       title: "Educational Resources",
       icon: <Book className="h-6 w-6" />,
       resources: [
@@ -376,7 +355,7 @@ const Resources = () => {
                         <CardDescription className="text-base">
                           {resource.description}
                         </CardDescription>
-                      </CardContent>
+                      </CardFooter>
                       <CardFooter>
                         <Button variant="ghost" className="text-digital-blue" asChild>
                           {resource.internal ? (
