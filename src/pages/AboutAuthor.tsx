@@ -60,7 +60,7 @@ const AboutAuthor = () => {
                   </div>
                   
                   <p>
-                    Evan Henshaw-Plath is a technologist and community advocate who has been building social 
+                    <a href="https://evan.henshaw-plath.com" target="_blank" rel="noopener noreferrer" className="text-digital-purple hover:underline">Rabble aka Evan Henshaw-Plath</a> is a technologist and community advocate who has been building social 
                     technologies for over two decades, including early work on Twitter and decentralized 
                     communication platforms.
                   </p>
