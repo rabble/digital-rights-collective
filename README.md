@@ -68,4 +68,25 @@ This project is built with:
 
 ## Deployment
 
-This project is deployed at [rights.social](https://rights.social).
+This project is deployed at [rights.social](https://rights.social) using Cloudflare Pages.
+
+### Cloudflare Pages Deployment
+
+To deploy this project to Cloudflare Pages:
+
+1. **Install Wrangler CLI** (if not already installed):
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. **Build the project**:
+   ```bash
+   npm run build
+   ```
+
+3. **Deploy to Cloudflare Pages**:
+   ```bash
+   wrangler pages publish dist
+   ```
+
+The configuration for Cloudflare Pages is managed through the `wrangler.toml` file in the project root.

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <g transform="translate(100, 50)">
+    <!-- Card grid container -->
+    <g>
+      <!-- Privacy & Security -->
+      <g transform="translate(0, 0)">
+        <rect width="450" height="210" rx="12" ry="12" fill="#ffffff" stroke="#e2e6f3" stroke-width="2"/>
+        <circle cx="65" cy="65" r="35" fill="#f3f0ff"/>
+        <path d="M65,45 C58.5,45 53,50.5 53,57 V67 H49 V85 H81 V67 H77 V57 C77,50.5 71.5,45 65,45 Z M65,49 C69.5,49 73,52.5 73,57 V67 H57 V57 C57,52.5 60.5,49 65,49 Z" fill="#8a70ff"/>
+        <text x="36" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Privacy &amp; Security</text>
+        <text x="36" y="160" width="380" font-family="Arial, sans-serif" font-size="14" fill="#666666">The ability to communicate and organize without fear of surveillance or exploitation.</text>
+      </g>
+
+      <!-- Ownership -->
+      <g transform="translate(500, 0)">
+        <rect width="450" height="210" rx="12" ry="12" fill="#ffffff" stroke="#e2e6f3" stroke-width="2"/>
+        <circle cx="65" cy="65" r="35" fill="#f3f0ff"/>
+        <path d="M65,45 C52,45 43,54 43,67 C43,80 52,85 65,85 C78,85 87,80 87,67 C87,54 78,45 65,45 Z M65,52 C73,52 80,57 80,67 C80,77 73,78 65,78 C57,78 50,77 50,67 C50,57 57,52 65,52 Z M62,59 V63 H68 V59 H62 Z M62,67 V74 H68 V67 H62 Z" fill="#8a70ff"/>
+        <text x="36" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Ownership</text>
+        <text x="36" y="160" width="380" font-family="Arial, sans-serif" font-size="14" fill="#666666">People and their communities must own their digital identities, connections and data, including the right to be forgotten.</text>
+      </g>
+
+      <!-- Interoperability -->
+      <g transform="translate(0, 240)">
+        <rect width="450" height="210" rx="12" ry="12" fill="#ffffff" stroke="#e2e6f3" stroke-width="2"/>
+        <circle cx="65" cy="65" r="35" fill="#f3f0ff"/>
+        <path d="M85,60 L65,40 L45,60 L53,60 L53,75 H45 L65,95 L85,75 H77 V60 H85 Z M60,75 V60 H70 V75 H60 Z" fill="#8a70ff"/>
+        <text x="36" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Interoperability &amp; The Right To Exit</text>
+        <text x="36" y="160" width="380" font-family="Arial, sans-serif" font-size="14" fill="#666666">The freedom to port your community in its entirety, to another app without losing your connections and content.</text>
+      </g>
+
+      <!-- Algorithmic Transparency -->
+      <g transform="translate(500, 240)">
+        <rect width="450" height="210" rx="12" ry="12" fill="#ffffff" stroke="#e2e6f3" stroke-width="2"/>
+        <circle cx="65" cy="65" r="35" fill="#f3f0ff"/>
+        <path d="M45,85 V75 H57 L62,65 L55,50 L60,40 L70,60 L80,50 L85,60 L75,70 L80,85 H45 Z" fill="#8a70ff"/>
+        <text x="36" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Algorithmic Transparency &amp; Control</text>
+        <text x="36" y="160" width="380" font-family="Arial, sans-serif" font-size="14" fill="#666666">Choosing the algorithms that shape your interactions: no more black box systems optimizing for engagement at the expense of community well-being.</text>
+      </g>
+
+      <!-- Self-governance -->
+      <g transform="translate(0, 480)">
+        <rect width="450" height="210" rx="12" ry="12" fill="#ffffff" stroke="#e2e6f3" stroke-width="2"/>
+        <circle cx="65" cy="65" r="35" fill="#f3f0ff"/>
+        <path d="M65,40 C55,40 47,48 47,58 C47,64 50,70 55,73 C50,76 47,83 47,90 H53 C53,83 58,78 65,78 C72,78 77,83 77,90 H83 C83,83 80,76 75,73 C80,70 83,64 83,58 C83,48 75,40 65,40 Z M65,46 C72,46 77,51 77,58 C77,65 72,70 65,70 C58,70 53,65 53,58 C53,51 58,46 65,46 Z" fill="#8a70ff"/>
+        <text x="36" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">Self-governance</text>
+        <text x="36" y="160" width="380" font-family="Arial, sans-serif" font-size="14" fill="#666666">Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community.</text>
+      </g>
+
+      <!-- Title -->
+      <text x="450" y="-20" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle">Social Media Bill of Rights</text>
+    </g>
+  </g>
+</svg>

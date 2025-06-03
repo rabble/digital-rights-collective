@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Book, Code, ExternalLink, Link2, Lightbulb, Globe, Shield, Database, Shuffle, LineChart, Users, BookOpen } from "lucide-react";
+import { Book, Code, ExternalLink, Link2, Lightbulb, Globe, Shield, Database, Shuffle, LineChart, Users, BookOpen, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -116,6 +116,15 @@ const Resources = () => {
       name: "Aspiration Tech",
       description: "Connecting nonprofit organizations, foundations and social change initiatives to software solutions and technology skills that help them better carry out their missions.",
       link: "https://aspirationtech.org/"
+    }
+  ];
+
+  const mediaInterviews = [
+    {
+      title: "WebSummit Interview: The Future of Digital Rights",
+      description: "Rabble discusses Twitter's evolution, the Social Media Bill of Rights, and how we can build better digital platforms that respect user rights.",
+      videoId: "nzlc3bnaoJI",
+      date: "2024"
     }
   ];
 
@@ -251,6 +260,60 @@ const Resources = () => {
                 equitable world are interdependent."
               </p>
               <p className="text-right text-digital-gray-medium mt-2">— DWeb Community</p>
+            </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="text-digital-purple">
+                <Video className="h-8 w-8" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-digital-gray-dark">
+                Media & Interviews
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none mb-8">
+              <p>
+                Watch interviews and talks about the Social Media Bill of Rights campaign, 
+                the history of social media, and the future of digital rights.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-6">
+              {mediaInterviews.map((interview, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{interview.title}</CardTitle>
+                    <CardDescription className="text-base">
+                      {interview.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="aspect-w-16 aspect-h-9 relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src={`https://www.youtube.com/embed/${interview.videoId}`}
+                        title={interview.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="ghost" className="text-digital-blue" asChild>
+                      <a 
+                        href={`https://www.youtube.com/watch?v=${interview.videoId}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        Watch on YouTube <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
             </div>
           </div>
           

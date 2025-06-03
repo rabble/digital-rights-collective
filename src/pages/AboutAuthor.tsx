@@ -25,7 +25,7 @@ const AboutAuthor = () => {
               <div className="md:w-1/3 mb-8 md:mb-0">
                 <div className="bg-digital-gray-light rounded-xl overflow-hidden mb-6">
                   <img 
-                    src="/lovable-uploads/c608de28-d3d1-49d7-81b1-2bd57ca71047.png" 
+                    src="/placeholder.svg" 
                     alt="Rabble (Evan Henshaw-Plath)" 
                     className="w-full h-auto aspect-square object-cover"
                   />
@@ -153,6 +153,21 @@ const AboutAuthor = () => {
                 <p className="text-digital-purple font-semibold mt-2">
                   rabble@nos.social
                 </p>
+              </div>
+              
+              <div className="mt-8 pt-8 border-t border-gray-100">
+                <h3 className="text-xl font-semibold mb-4 text-digital-gray-dark">
+                  Recent Media
+                </h3>
+                <p className="text-digital-gray-medium mb-4">
+                  Watch Rabble's recent interview at WebSummit discussing the Social Media Bill of Rights 
+                  and the future of digital platforms.
+                </p>
+                <Button variant="ghost" className="text-digital-blue" asChild>
+                  <Link to="/resources#media">
+                    View Interview <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
