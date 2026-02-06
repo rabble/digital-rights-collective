@@ -9,7 +9,7 @@ const GovernanceCard = () => {
     <ActionCard
       icon={ExternalLink}
       title="Develop Community Governance Processes"
-      description="Self-governance is at the heart of the Digital Bill of Rights. Building these processes now prepares your community for more autonomous platforms."
+      description="Self-governance is at the heart of the Declaration of Social Media Rights. Building these processes now prepares your community for more autonomous platforms."
     >
       <div>
         <h4 className="font-medium text-digital-gray-dark mb-2">Take action:</h4>

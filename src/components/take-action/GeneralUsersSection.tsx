@@ -61,11 +61,11 @@ const GeneralUsersSection = () => {
           </div>
         </div>
         
-        {/* Share the Bill of Rights */}
+        {/* Share the Declaration */}
         <div>
           <h3 className="text-xl font-semibold text-digital-purple flex items-center gap-2 mb-4">
             <Share2 className="h-5 w-5" />
-            Share the Bill of Rights
+            Share the Declaration
           </h3>
           
           <div className="mb-4 bg-digital-purple/5 p-4 rounded-lg">
@@ -82,8 +82,8 @@ const GeneralUsersSection = () => {
               Take action:
             </p>
             <ul className="space-y-2 text-digital-gray-medium ml-5 list-disc">
-              <li>Share this Bill of Rights on your existing social networks</li>
-              <li>Use the hashtag #DigitalBillOfRights when posting</li>
+              <li>Share this Declaration on your existing social networks</li>
+              <li>Use the hashtag #DeclarationOfSocialMediaRights when posting</li>
               <li>Have conversations with friends and family about digital rights</li>
               <li>Ask the question: "Who really controls your online community?"</li>
             </ul>

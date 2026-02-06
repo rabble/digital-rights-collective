@@ -91,14 +91,17 @@ const RightsPrinciples = () => {
                 <h3 className="text-2xl font-bold text-digital-gray-dark">Self-governance</h3>
               </div>
               <p className="text-digital-gray-medium mb-6">
-                Crucially, communities need the right to self-govern, setting their own rules for behavior which are 
-                contextually relevant to their community. No more one-size-fits-all moderation.
+                Crucially, communities need the right to self-govern, setting their own rules for behavior which are
+                contextually relevant to their community. No more one-size-fits-all moderation. Good governance requires
+                due process — transparent rules, fair enforcement, and the right to understand and contest decisions
+                that affect your participation.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Community Standards</span>
                 <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Democratic Moderation</span>
+                <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Due Process</span>
+                <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Transparency</span>
                 <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Cultural Context</span>
-                <span className="bg-digital-purple/10 text-digital-purple text-sm px-3 py-1 rounded-full">Collective Ownership</span>
               </div>
             </div>
           </div>

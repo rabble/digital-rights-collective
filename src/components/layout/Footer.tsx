@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Social Media Bill of Rights</h3>
+            <h3 className="text-xl font-bold mb-4">Declaration of Social Media Rights</h3>
             <p className="text-gray-400">
               Building a movement for digital rights in social media.
               <br /><br />
@@ -20,7 +20,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li><Link to="/" className="hover:text-digital-purple-light transition-colors">Home</Link></li>
-              <li><Link to="/bill-of-rights" className="hover:text-digital-purple-light transition-colors">Bill of Rights</Link></li>
+              <li><Link to="/declaration" className="hover:text-digital-purple-light transition-colors">Declaration</Link></li>
               <li><Link to="/platform-comparison" className="hover:text-digital-purple-light transition-colors">Platform Comparison</Link></li>
               <li><Link to="/resources" className="hover:text-digital-purple-light transition-colors">Resources</Link></li>
               <li><Link to="/faq" className="hover:text-digital-purple-light transition-colors">FAQ</Link></li>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} Social Media Bill of Rights. All content licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" className="text-digital-purple-light hover:underline">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.</p>
+          <p>© {new Date().getFullYear()} Declaration of Social Media Rights. All content licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" className="text-digital-purple-light hover:underline">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.</p>
         </div>
       </div>
     </footer>

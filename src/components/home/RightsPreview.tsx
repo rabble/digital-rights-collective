@@ -33,7 +33,7 @@ const RightsPreview = () => {
       id: 5,
       icon: <Users className="h-8 w-8" />,
       title: "Self-governance",
-      description: "Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community."
+      description: "Communities need the right to self-govern, setting their own rules with due process — transparent enforcement, the right to be heard, and accountability in how decisions are made."
     }
   ];
 
@@ -55,7 +55,7 @@ const RightsPreview = () => {
               size="lg"
               asChild
             >
-              <Link to="/bill-of-rights">Full Bill of Rights</Link>
+              <Link to="/declaration">Full Declaration</Link>
             </Button>
           </div>
         </div>

@@ -6,7 +6,7 @@
 
 ## About the Project
 
-The Digital Rights Collective has created a **Social Media Bill of Rights** to reclaim our digital spaces from platforms that treat human connection as a commodity. Just as the original Bill of Rights protected individual freedoms from government overreach, we need fundamental protections for our digital communities from corporate control and surveillance capitalism.
+The Digital Rights Collective has created a **Declaration of Social Media Rights** to reclaim our digital spaces from platforms that treat human connection as a commodity. Just as the original Bill of Rights protected individual freedoms from government overreach, we need fundamental protections for our digital communities from corporate control and surveillance capitalism.
 
 ### The Five Fundamental Rights
 
@@ -18,11 +18,11 @@ The Digital Rights Collective has created a **Social Media Bill of Rights** to r
 
 4. **Algorithmic Transparency & Control** - Choosing the algorithms that shape your interactions: no more black box systems optimizing for engagement at the expense of community well-being.
 
-5. **Self-governance** - Communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community. No more one-size-fits-all moderation.
+5. **Self-governance** - Communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community. Good governance requires due process — transparent rules, fair enforcement, the right to be heard, and accountability. No more one-size-fits-all moderation or arbitrary deplatforming.
 
 These fundamental rights are essential for building a healthy, open social media ecosystem that prioritizes user agency, community well-being, and sustainable digital spaces. Embracing these principles is crucial as we work toward a more equitable and human-centered internet.
 
-The Social Media Bill of Rights isn't just a critique—it's a roadmap for building better digital spaces that respect human dignity, strengthen communities, and foster genuine connection rather than extracting value.
+The Declaration of Social Media Rights isn't just a critique—it's a roadmap for building better digital spaces that respect human dignity, strengthen communities, and foster genuine connection rather than extracting value.
 
 ## How can I edit this code?
 

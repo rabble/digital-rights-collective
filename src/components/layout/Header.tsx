@@ -19,12 +19,12 @@ const Header = () => {
         <Link to="/" className="font-bold text-xl md:text-2xl mr-6">
           {isMobile ? (
             <>
-              <span className="whitespace-nowrap">Social Media</span>
+              <span className="whitespace-nowrap">Social Media Rights</span>
               <br />
-              <span className="whitespace-nowrap">Bill of Rights</span>
+              <span className="whitespace-nowrap">Declaration</span>
             </>
           ) : (
-            <span className="whitespace-nowrap">Social Media Bill of Rights</span>
+            <span className="whitespace-nowrap">Declaration of Social Media Rights</span>
           )}
         </Link>
 
@@ -43,8 +43,8 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link to="/bill-of-rights" className="hover:text-digital-purple-light transition-colors">
-            The Bill of Rights
+          <Link to="/declaration" className="hover:text-digital-purple-light transition-colors">
+            The Declaration
           </Link>
           <Link to="/platform-comparison" className="hover:text-digital-purple-light transition-colors">
             Platform Comparison
@@ -70,12 +70,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-digital-gray-dark z-50 md:hidden">
             <nav className="flex flex-col space-y-4 p-6">
-              <Link 
-                to="/bill-of-rights" 
+              <Link
+                to="/declaration"
                 className="hover:text-digital-purple-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                The Bill of Rights
+                The Declaration
               </Link>
               <Link 
                 to="/platform-comparison" 

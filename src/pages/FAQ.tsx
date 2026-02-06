@@ -29,7 +29,7 @@ const FAQ = () => {
     },
     {
       question: "Won't more privacy and community control lead to more harmful content?",
-      answer: "Not necessarily. Community self-governance doesn't mean no governance—it means governance that's contextual and accountable to community members rather than distant corporate policies. Many community-governed spaces have stricter, more effective moderation than algorithm-driven platforms because they're built on shared values and human judgment."
+      answer: "Not necessarily. Community self-governance doesn't mean no governance—it means governance that's contextual, accountable, and includes due process. Communities set their own rules, enforce them transparently, and give members the right to understand and contest decisions. Many community-governed spaces have stricter, more effective moderation than algorithm-driven platforms because they're built on shared values, human judgment, and fair processes."
     },
     {
       question: "What about national security or law enforcement needs?",
@@ -133,7 +133,7 @@ const FAQ = () => {
                 Ready to Take Action?
               </h3>
               <p className="text-digital-gray-medium mb-6">
-                Now that you understand the principles behind the Digital Bill of Rights, 
+                Now that you understand the principles behind the Declaration of Social Media Rights,
                 learn how you can help promote these ideas.
               </p>
               <Button 

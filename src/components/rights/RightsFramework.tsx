@@ -9,7 +9,7 @@ const RightsFramework = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 id="framework-heading" className="text-3xl font-bold mb-6">A New Framework for Digital Communities</h2>
           <p className="text-lg mb-8">
-            The Social Media Bill of Rights isn't just a critique—it's a roadmap for building better digital spaces that 
+            The Declaration of Social Media Rights isn't just a critique—it's a roadmap for building better digital spaces that 
             respect human dignity, strengthen communities, and foster genuine connection rather than extracting value.
           </p>
           <div className="flex justify-center">

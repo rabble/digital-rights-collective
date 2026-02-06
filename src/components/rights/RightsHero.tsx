@@ -16,7 +16,7 @@ const RightsHero = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 animate-fade-in">
             <span className="bg-gradient-to-r from-digital-purple-light to-digital-coral bg-clip-text text-transparent">
-              Social Media Bill of Rights
+              Declaration of Social Media Rights
             </span>
           </h1>
           

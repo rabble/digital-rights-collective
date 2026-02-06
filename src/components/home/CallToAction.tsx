@@ -31,7 +31,7 @@ const CallToAction = () => {
                 className="w-full sm:w-auto bg-digital-purple-light hover:bg-digital-purple-light/90"
                 asChild
               >
-                <Link to="/endorse">Endorse the Bill of Rights</Link>
+                <Link to="/endorse">Endorse the Declaration</Link>
               </Button>
             </div>
             

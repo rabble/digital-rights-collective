@@ -79,7 +79,7 @@ const AboutAuthor = () => {
                   </p>
                   
                   <p>
-                    The Social Media Bill of Rights initiative draws on Rabble's extensive experience at the 
+                    The Declaration of Social Media Rights initiative draws on Rabble's extensive experience at the 
                     intersection of technology and community organizing. It represents their vision for 
                     reclaiming our digital commons from corporate control and building a more equitable, 
                     community-governed internet.
@@ -95,8 +95,8 @@ const AboutAuthor = () => {
                 
                 <div className="mt-8">
                   <Button className="bg-digital-purple hover:bg-digital-purple-dark text-white" asChild>
-                    <Link to="/bill-of-rights">
-                      Read the Social Media Bill of Rights <ArrowRight className="ml-2 h-4 w-4" />
+                    <Link to="/declaration">
+                      Read the Declaration of Social Media Rights <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -120,8 +120,8 @@ const AboutAuthor = () => {
                     For Media Inquiries
                   </h3>
                   <p className="text-digital-gray-medium mb-4">
-                    If you're a journalist or content creator interested in covering the Social Media 
-                    Bill of Rights initiative, please get in touch.
+                    If you're a journalist or content creator interested in covering the Declaration of
+                    Social Media Rights initiative, please get in touch.
                   </p>
                   <p className="text-digital-purple font-semibold">
                     Email: alice@flockmktg.com
@@ -147,7 +147,7 @@ const AboutAuthor = () => {
                   General Contact
                 </h3>
                 <p className="text-digital-gray-medium">
-                  For general inquiries about the Social Media Bill of Rights initiative, 
+                  For general inquiries about the Declaration of Social Media Rights initiative,
                   collaboration opportunities, or other questions, please email:
                 </p>
                 <p className="text-digital-purple font-semibold mt-2">
@@ -160,7 +160,7 @@ const AboutAuthor = () => {
                   Recent Media
                 </h3>
                 <p className="text-digital-gray-medium mb-4">
-                  Watch Rabble's recent interview at WebSummit discussing the Social Media Bill of Rights 
+                  Watch Rabble's recent interview at WebSummit discussing the Declaration of Social Media Rights
                   and the future of digital platforms.
                 </p>
                 <Button variant="ghost" className="text-digital-blue" asChild>

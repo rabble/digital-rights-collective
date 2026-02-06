@@ -122,7 +122,7 @@ const Resources = () => {
   const mediaInterviews = [
     {
       title: "WebSummit Interview: The Future of Digital Rights",
-      description: "Rabble discusses Twitter's evolution, the Social Media Bill of Rights, and how we can build better digital platforms that respect user rights.",
+      description: "Rabble discusses Twitter's evolution, the Declaration of Social Media Rights, and how we can build better digital platforms that respect user rights.",
       videoId: "nzlc3bnaoJI",
       date: "2024"
     }
@@ -275,7 +275,7 @@ const Resources = () => {
             
             <div className="prose prose-lg max-w-none mb-8">
               <p>
-                Watch interviews and talks about the Social Media Bill of Rights campaign, 
+                Watch interviews and talks about the Declaration of Social Media Rights campaign,
                 the history of social media, and the future of digital rights.
               </p>
             </div>

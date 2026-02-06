@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 
 const Endorse = () => {
   const handleMailtoClick = () => {
-    window.location.href = "mailto:evan@henshaw-plath.com?subject=Endorsing%20the%20Social%20Media%20Bill%20of%20Rights";
+    window.location.href = "mailto:evan@henshaw-plath.com?subject=Endorsing%20the%20Declaration%20of%20Social%20Media%20Rights";
   };
 
   return (
@@ -14,16 +14,16 @@ const Endorse = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-8 text-digital-gray-dark">
-              Endorse the Social Media Bill of Rights
+              Endorse the Declaration of Social Media Rights
             </h1>
             
             <div className="bg-white rounded-lg shadow-md p-6 md:p-10 mb-12">
               <p className="text-lg mb-6 text-digital-gray-medium">
-                We're building a coalition of individuals, organizations, and communities who support the Social Media Bill of Rights and the vision of user-controlled, community-governed social media.
+                We're building a coalition of individuals, organizations, and communities who support the Declaration of Social Media Rights and the vision of user-controlled, community-governed social media.
               </p>
               
               <p className="text-lg mb-6 text-digital-gray-medium">
-                To endorse the Social Media Bill of Rights, please send an email to Evan Henshaw-Plath with your name, organization (if applicable), and any comments you'd like to share.
+                To endorse the Declaration of Social Media Rights, please send an email to Evan Henshaw-Plath with your name, organization (if applicable), and any comments you'd like to share.
               </p>
               
               <div className="bg-digital-purple/5 rounded-lg p-6 mb-8 border border-digital-purple/20">
@@ -62,7 +62,7 @@ const Endorse = () => {
               </p>
               
               <p className="text-lg mb-6 text-digital-gray-medium">
-                When you endorse the Bill of Rights, you're joining a growing coalition of users, developers, community leaders, and organizations committed to building a better digital future where our online communities are owned and controlled by the people who use them.
+                When you endorse the Declaration, you're joining a growing coalition of users, developers, community leaders, and organizations committed to building a better digital future where our online communities are owned and controlled by the people who use them.
               </p>
             </div>
           </div>

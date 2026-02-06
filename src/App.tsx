@@ -4,9 +4,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
-import BillOfRights from "./pages/BillOfRights";
+import Declaration from "./pages/Declaration";
 import PlatformComparison from "./pages/PlatformComparison";
 import AboutAuthor from "./pages/AboutAuthor";
 import Resources from "./pages/Resources";
@@ -28,7 +28,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/bill-of-rights" element={<BillOfRights />} />
+            <Route path="/declaration" element={<Declaration />} />
+            <Route path="/bill-of-rights" element={<Navigate to="/declaration" replace />} />
             <Route path="/platform-comparison" element={<PlatformComparison />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/open-protocols-guide" element={<OpenProtocolsGuide />} />

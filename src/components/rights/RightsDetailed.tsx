@@ -85,10 +85,12 @@ const RightsDetailed = () => {
             <h3 className="text-2xl font-bold text-digital-gray-dark">Self-governance</h3>
           </div>
           <div className="ml-11">
-            <p className="mb-4 text-digital-gray-medium">Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community.</p>
+            <p className="mb-4 text-digital-gray-medium">Crucially, communities need the right to self-govern, setting their own rules for behavior which are contextually relevant to their community. Self-governance demands due process — no community can be well-governed without transparent rules, fair enforcement, and accountability.</p>
             <ul className="list-disc pl-5 space-y-3 text-digital-gray-medium">
               <li>Community-defined moderation standards</li>
               <li>Democratic processes for rule creation</li>
+              <li>Due process in enforcement: clear notice, the right to be heard, and independent review</li>
+              <li>Transparency in how rules are applied and decisions are made</li>
               <li>Protection from arbitrary deplatforming</li>
               <li>Cultural context in content moderation</li>
             </ul>

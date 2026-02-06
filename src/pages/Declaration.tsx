@@ -8,7 +8,7 @@ import RightsCTA from "@/components/rights/RightsCTA";
 import CallToAction from "@/components/home/CallToAction";
 import { ArrowRight } from "lucide-react";
 
-const BillOfRights = () => {
+const Declaration = () => {
   return (
     <Layout>
       <main id="main-content">
@@ -32,4 +32,4 @@ const BillOfRights = () => {
   );
 };
 
-export default BillOfRights;
+export default Declaration;

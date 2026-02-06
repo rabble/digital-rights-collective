@@ -74,7 +74,7 @@ const Podcast = () => {
                 <h2 className="text-xl font-semibold mb-4">Get Notified</h2>
                 <p className="text-gray-300 mb-4 text-sm">
                   Subscribe to be notified when new episodes are released, plus receive updates 
-                  on the Social Media Bill of Rights movement.
+                  on the Declaration of Social Media Rights movement.
                 </p>
                 
                 <Button className="w-full bg-digital-purple-light hover:bg-digital-purple-light/90" asChild>
