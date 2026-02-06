@@ -90,6 +90,19 @@ const PlatformComparison = () => {
                 </p>
               </div>
               
+              <div className="bg-digital-purple/10 p-4 md:p-6 rounded-lg border-l-4 border-digital-purple">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-digital-gray-dark">Case Study: diVine — Built on These Rights</h3>
+                <p className="text-sm md:text-base text-digital-gray-medium">
+                  <a href="https://divine.video" target="_blank" rel="noopener noreferrer" className="text-digital-purple hover:underline font-medium">diVine</a> is
+                  a short-form video platform built on the Nostr protocol that demonstrates what social media looks like
+                  when designed from the ground up around the Declaration of Social Media Rights. Your identity and
+                  videos are owned by you through cryptographic keys, not locked to any company. Content published on
+                  diVine is accessible from any Nostr client — there is no walled garden. And governance is
+                  community-driven with transparent rules and due process, not dictated by corporate interests. diVine
+                  shows that it's possible to build a compelling social media experience without sacrificing user rights.
+                </p>
+              </div>
+
               <div className="bg-digital-gray-light p-4 md:p-6 rounded-lg">
                 <h3 className="text-lg md:text-xl font-semibold mb-2 text-digital-gray-dark">The Future of Algorithms</h3>
                 <p className="text-sm md:text-base text-digital-gray-medium">
@@ -128,14 +141,25 @@ const PlatformComparison = () => {
                   </a>
                 </Button>
                 
-                <Button 
+                <Button
                   variant="outline"
-                  size={isMobile ? "sm" : "default"} 
+                  size={isMobile ? "sm" : "default"}
                   className="border-digital-purple text-digital-purple hover:bg-digital-purple/10"
                   asChild
                 >
                   <a href="https://nostr.com" target="_blank" rel="noopener noreferrer">
                     Try Nostr <ExternalLink className="ml-1 h-3 w-3 md:ml-2 md:h-4 md:w-4" />
+                  </a>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  size={isMobile ? "sm" : "default"}
+                  className="border-digital-purple text-digital-purple hover:bg-digital-purple/10"
+                  asChild
+                >
+                  <a href="https://divine.video" target="_blank" rel="noopener noreferrer">
+                    Try diVine <ExternalLink className="ml-1 h-3 w-3 md:ml-2 md:h-4 md:w-4" />
                   </a>
                 </Button>
                 

@@ -11,6 +11,7 @@ const PlatformComparisonPreview = () => {
     { name: "Mastodon", type: "Open Protocol" },
     { name: "BlueSky", type: "Open Protocol" },
     { name: "Nostr", type: "Open Protocol" },
+    { name: "diVine", type: "Open Protocol" },
   ];
 
   return (

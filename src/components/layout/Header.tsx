@@ -19,9 +19,9 @@ const Header = () => {
         <Link to="/" className="font-bold text-xl md:text-2xl mr-6">
           {isMobile ? (
             <>
-              <span className="whitespace-nowrap">Social Media Rights</span>
+              <span className="whitespace-nowrap">Declaration of</span>
               <br />
-              <span className="whitespace-nowrap">Declaration</span>
+              <span className="whitespace-nowrap">Social Media Rights</span>
             </>
           ) : (
             <span className="whitespace-nowrap">Declaration of Social Media Rights</span>

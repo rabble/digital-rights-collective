@@ -73,6 +73,11 @@ const Resources = () => {
           link: "https://nos.social/"
         },
         {
+          title: "diVine",
+          description: "A short-form video platform built on Nostr and designed from the ground up around the Declaration of Social Media Rights.",
+          link: "https://divine.video/"
+        },
+        {
           title: "Bluesky App",
           description: "The official client for the AT Protocol, offering a clean interface and algorithmic choice.",
           link: "https://bsky.app"

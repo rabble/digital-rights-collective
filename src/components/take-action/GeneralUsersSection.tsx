@@ -45,6 +45,9 @@ const GeneralUsersSection = () => {
                 <strong>Try nos.social</strong> (<a href="https://nos.social" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">nos.social</a>) - A user-friendly client app for the Nostr protocol
               </li>
               <li>
+                <strong>Try diVine</strong> (<a href="https://divine.video" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">divine.video</a>) - Short-form video built on Nostr and the Declaration of Social Media Rights
+              </li>
+              <li>
                 <strong>Explore BlueSky</strong> (<a href="https://bsky.app" className="text-digital-purple hover:underline" target="_blank" rel="noopener noreferrer">bsky.app</a>) - Experience algorithm choice and portable identity
               </li>
               <li>

@@ -226,6 +226,30 @@ const platforms: Platform[] = [
     }
   },
   {
+    name: "diVine",
+    type: "Open Protocol",
+    privacy: {
+      rating: "Good",
+      explanation: "Built on Nostr with cryptographic identity. No corporate data mining or surveillance-based advertising."
+    },
+    ownership: {
+      rating: "Excellent",
+      explanation: "Your videos and identity are yours via Nostr keys. Content is portable across any Nostr client, not locked to diVine."
+    },
+    interoperability: {
+      rating: "Excellent",
+      explanation: "Built on Nostr protocol — videos published on diVine are accessible from any Nostr client. No walled garden."
+    },
+    algorithmic: {
+      rating: "Good",
+      explanation: "No opaque engagement-maximizing algorithms. Content discovery is relay-based and user-controlled."
+    },
+    governance: {
+      rating: "Excellent",
+      explanation: "Designed from the ground up around the Declaration of Social Media Rights. Community-governed with transparent rules and due process built into the platform's design."
+    }
+  },
+  {
     name: "Signal",
     type: "Open Protocol",
     privacy: {
